@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block page_title %}Student Dashboard{% endblock %}
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-info"><div class="inner"><h3>{{ total_attendance }}</h3><p>Total Attendance</p></div><div class="icon"><i class="fas fa-clipboard-check"></i></div></div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-success"><div class="inner"><h3>{{ attendance_present }}</h3><p>Present</p></div><div class="icon"><i class="fas fa-check"></i></div></div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-warning"><div class="inner"><h3>{{ attendance_absent }}</h3><p>Absent</p></div><div class="icon"><i class="fas fa-times"></i></div></div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-danger"><div class="inner"><h3>{{ total_subjects }}</h3><p>Total Subjects</p></div><div class="icon"><i class="fas fa-book"></i></div></div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header"><h3 class="card-title">Welcome to Student Dashboard</h3></div>
+        <div class="card-body"><p>View your attendance, results, apply for leave, and more.</p></div>
+    </div>
+</div>
+{% endblock %}

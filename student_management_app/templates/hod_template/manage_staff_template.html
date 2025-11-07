@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Manage Staff
+{% endblock page_title %}
+
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Manage Staff</h3>
+                    <a href="{% url 'add_staff' %}" class="btn btn-primary float-right">Add New Staff</a>
+                </div>
+                
+                <div class="card-body">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for staff in staffs %}
+                            <tr>
+                                <td>{{ staff.id }}</td>
+                                <td>{{ staff.admin.first_name }} {{ staff.admin.last_name }}</td>
+                                <td>{{ staff.admin.email }}</td>
+                                <td>{{ staff.address }}</td>
+                                <td>
+                                    <a href="{% url 'edit_staff' staff.admin.id %}" class="btn btn-success btn-sm">Edit</a>
+                                    <a href="{% url 'delete_staff' staff.admin.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

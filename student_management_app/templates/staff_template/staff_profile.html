@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block page_title %}Staff Profile{% endblock %}
+{% block main_content %}
+<div class="container-fluid">
+    <div class="card card-primary">
+        <div class="card-header"><h3 class="card-title">Staff Profile</h3></div>
+        <form method="post" action="{% url 'staff_profile_update' %}">
+            {% csrf_token %}
+            <div class="card-body">
+                {% if messages %}{% for message in messages %}<div class="alert alert-{{ message.tags }}">{{ message }}</div>{% endfor %}{% endif %}
+                <div class="form-group"><label>First Name</label><input type="text" class="form-control" name="first_name" value="{{ user.first_name }}" required></div>
+                <div class="form-group"><label>Last Name</label><input type="text" class="form-control" name="last_name" value="{{ user.last_name }}" required></div>
+                <div class="form-group"><label>Email</label><input type="email" class="form-control" value="{{ user.email }}" disabled></div>
+                <div class="form-group"><label>Address</label><textarea class="form-control" name="address" rows="3" required>{{ staff.address }}</textarea></div>
+                <div class="form-group"><label>New Password (Leave empty to keep current)</label><input type="password" class="form-control" name="password"></div>
+            </div>
+            <div class="card-footer"><button type="submit" class="btn btn-primary">Update Profile</button></div>
+        </form>
+    </div>
+</div>
+{% endblock %}

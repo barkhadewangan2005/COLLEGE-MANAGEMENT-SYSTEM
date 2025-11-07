@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block page_title %}Manage Subjects{% endblock %}
+{% block main_content %}
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header"><h3 class="card-title">Manage Subjects</h3><a href="{% url 'add_subject' %}" class="btn btn-primary float-right">Add New Subject</a></div>
+        <div class="card-body">
+            {% if messages %}{% for message in messages %}<div class="alert alert-{{ message.tags }}">{{ message }}</div>{% endfor %}{% endif %}
+            <table class="table table-bordered table-striped">
+                <thead><tr><th>ID</th><th>Subject Name</th><th>Course</th><th>Staff Assigned</th><th>Actions</th></tr></thead>
+                <tbody>
+                    {% for subject in subjects %}
+                    <tr>
+                        <td>{{ subject.id }}</td>
+                        <td>{{ subject.subject_name }}</td>
+                        <td>{{ subject.course_id.course_name }}</td>
+                        <td>{{ subject.staff_id.first_name }} {{ subject.staff_id.last_name }}</td>
+                        <td>
+                            <a href="{% url 'edit_subject' subject.id %}" class="btn btn-success btn-sm">Edit</a>
+                            <a href="{% url 'delete_subject' subject.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

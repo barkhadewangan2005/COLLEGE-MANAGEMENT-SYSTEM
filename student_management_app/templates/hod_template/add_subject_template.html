@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block page_title %}Add Subject{% endblock %}
+{% block main_content %}
+<div class="container-fluid">
+    <div class="card card-primary">
+        <div class="card-header"><h3 class="card-title">Add Subject</h3></div>
+        <form method="post" action="{% url 'add_subject_save' %}">
+            {% csrf_token %}
+            <div class="card-body">
+                {% if messages %}{% for message in messages %}<div class="alert alert-{{ message.tags }}">{{ message }}</div>{% endfor %}{% endif %}
+                <div class="form-group"><label>Subject Name</label><input type="text" class="form-control" name="subject" placeholder="Enter Subject Name" required></div>
+                <div class="form-group"><label>Course</label><select class="form-control" name="course_id" required><option value="">Select Course</option>{% for course in courses %}<option value="{{ course.id }}">{{ course.course_name }}</option>{% endfor %}</select></div>
+                <div class="form-group"><label>Assign Staff</label><select class="form-control" name="staff_id" required><option value="">Select Staff</option>{% for staff in staffs %}<option value="{{ staff.id }}">{{ staff.first_name }} {{ staff.last_name }}</option>{% endfor %}</select></div>
+            </div>
+            <div class="card-footer"><button type="submit" class="btn btn-primary">Add Subject</button></div>
+        </form>
+    </div>
+</div>
+{% endblock %}

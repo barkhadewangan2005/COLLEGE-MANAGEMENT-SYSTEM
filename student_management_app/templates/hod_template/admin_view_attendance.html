@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block page_title %}View Attendance{% endblock %}
+{% block main_content %}
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header"><h3 class="card-title">View Attendance</h3></div>
+        <div class="card-body">
+            <div class="form-group"><label>Subject</label><select class="form-control" id="subject"><option value="">Select Subject</option>{% for subject in subjects %}<option value="{{ subject.id }}">{{ subject.subject_name }}</option>{% endfor %}</select></div>
+            <div class="form-group"><label>Session Year</label><select class="form-control" id="session_year_id"><option value="">Select Session</option>{% for session in session_years %}<option value="{{ session.id }}">{{ session.session_start_year }} - {{ session.session_end_year }}</option>{% endfor %}</select></div>
+            <button class="btn btn-primary" id="fetch_attendance">Fetch Attendance Dates</button>
+            <hr>
+            <div id="attendance_dates"></div>
+            <div id="attendance_students"></div>
+        </div>
+    </div>
+</div>
+<script>
+$('#fetch_attendance').click(function(){
+    var subject = $('#subject').val();
+    var session_year_id = $('#session_year_id').val();
+    if(subject == '' || session_year_id == ''){
+        alert('Please select subject and session');
+        return;
+    }
+    $.ajax({
+        url: '{% url "admin_get_attendance_dates" %}',
+        type: 'POST',
+        data: {subject:subject, session_year_id:session_year_id},
+        success: function(response){
+            var data = JSON.parse(response);
+            var html = '<label>Select Attendance Date</label><select class="form-control" id="attendance_date"><option value="">Select Date</option>';
+            for(var i=0; i<data.length; i++){
+                html += '<option value="'+data[i].id+'">'+data[i].attendance_date+'</option>';
+            }
+            html += '</select><br><button class="btn btn-success" id="fetch_students">Fetch Students</button>';
+            $('#attendance_dates').html(html);
+        }
+    });
+});
+$(document).on('click', '#fetch_students', function(){
+    var attendance_date = $('#attendance_date').val();
+    $.ajax({
+        url: '{% url "admin_get_attendance_student" %}',
+        type: 'POST',
+        data: {attendance_date:attendance_date},
+        success: function(response){
+            var data = JSON.parse(response);
+            var html = '<table class="table table-bordered"><thead><tr><th>Name</th><th>Status</th></tr></thead><tbody>';
+            for(var i=0; i<data.length; i++){
+                html += '<tr><td>'+data[i].name+'</td><td>'+(data[i].status ? '<span class="badge badge-success">Present</span>' : '<span class="badge badge-danger">Absent</span>')+'</td></tr>';
+            }
+            html += '</tbody></table>';
+            $('#attendance_students').html(html);
+        }
+    });
+});
+</script>
+{% endblock %}

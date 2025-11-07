@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Manage Sessions
+{% endblock page_title %}
+
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Manage Session Years</h3>
+                    <a href="{% url 'add_session' %}" class="btn btn-primary float-right">Add New Session</a>
+                </div>
+                
+                <div class="card-body">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Session Start Year</th>
+                                <th>Session End Year</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for session_year in session_years %}
+                            <tr>
+                                <td>{{ session_year.id }}</td>
+                                <td>{{ session_year.session_start_year }}</td>
+                                <td>{{ session_year.session_end_year }}</td>
+                                <td>
+                                    <a href="{% url 'edit_session' session_year.id %}" class="btn btn-success btn-sm">Edit</a>
+                                    <a href="{% url 'delete_session' session_year.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}
