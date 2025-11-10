@@ -31,6 +31,12 @@ def student_home(request):
         data_present.append(attendance_present_count)
         data_absent.append(attendance_absent_count)
     
+    # Calculate attendance percentage
+    if total_attendance > 0:
+        attendance_percentage = (attendance_present / total_attendance) * 100
+    else:
+        attendance_percentage = 0
+    
     context = {
         "total_attendance": total_attendance,
         "attendance_present": attendance_present,
@@ -38,7 +44,8 @@ def student_home(request):
         "total_subjects": total_subjects,
         "subject_name": subject_name,
         "data_present": data_present,
-        "data_absent": data_absent
+        "data_absent": data_absent,
+        "attendance_percentage": round(attendance_percentage, 1)
     }
     return render(request, "student_template/student_home_template.html", context)
 

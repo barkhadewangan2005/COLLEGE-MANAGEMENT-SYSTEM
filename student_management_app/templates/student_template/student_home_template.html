@@ -16,9 +16,137 @@
             <div class="small-box bg-danger"><div class="inner"><h3>{{ total_subjects }}</h3><p>Total Subjects</p></div><div class="icon"><i class="fas fa-book"></i></div></div>
         </div>
     </div>
-    <div class="card">
-        <div class="card-header"><h3 class="card-title">Welcome to Student Dashboard</h3></div>
-        <div class="card-body"><p>View your attendance, results, apply for leave, and more.</p></div>
+    <!-- Charts Row -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header border-transparent">
+                    <h3 class="card-title"><i class="fas fa-chart-pie"></i> Attendance Overview</h3>
+                </div>
+                <div class="card-body">
+                    <canvas id="attendanceChart" style="height: 250px;"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header border-transparent">
+                    <h3 class="card-title"><i class="fas fa-percentage"></i> Attendance Percentage</h3>
+                </div>
+                <div class="card-body text-center">
+                    <div class="progress-group">
+                        <div style="font-size: 48px; font-weight: bold; color: {% if attendance_percentage >= 75 %}#28a745{% elif attendance_percentage >= 60 %}#ffc107{% else %}#dc3545{% endif %};">
+                            {{ attendance_percentage|floatformat:1 }}%
+                        </div>
+                        <p class="mt-3">Your Overall Attendance</p>
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar {% if attendance_percentage >= 75 %}bg-success{% elif attendance_percentage >= 60 %}bg-warning{% else %}bg-danger{% endif %}" 
+                                 role="progressbar" 
+                                 style="width: {{ attendance_percentage }}%;" 
+                                 aria-valuenow="{{ attendance_percentage }}" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">
+                                {{ attendance_percentage|floatformat:1 }}%
+                            </div>
+                        </div>
+                        <p class="mt-2 text-muted">
+                            {% if attendance_percentage >= 75 %}
+                                <i class="fas fa-check-circle text-success"></i> Excellent! Keep it up!
+                            {% elif attendance_percentage >= 60 %}
+                                <i class="fas fa-exclamation-triangle text-warning"></i> Good, but try to improve
+                            {% else %}
+                                <i class="fas fa-times-circle text-danger"></i> Below requirement, attend more classes
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Card -->
+    <div class="card card-info card-outline">
+        <div class="card-header">
+            <h3 class="card-title"><i class="fas fa-home"></i> Welcome to Student Dashboard</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-tasks"></i> Quick Actions</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-chevron-right text-primary"></i> <a href="{% url 'student_view_attendance' %}">View My Attendance</a></li>
+                        <li><i class="fas fa-chevron-right text-success"></i> <a href="{% url 'student_view_result' %}">View My Results</a></li>
+                        <li><i class="fas fa-chevron-right text-warning"></i> <a href="{% url 'student_apply_leave' %}">Apply for Leave</a></li>
+                        <li><i class="fas fa-chevron-right text-info"></i> <a href="{% url 'student_feedback' %}">Send Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5><i class="fas fa-info-circle"></i> Your Academic Summary</h5>
+                    <p>Stay updated with your academic performance.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-book text-primary"></i> {{ total_subjects }} Total Subjects</li>
+                        <li><i class="fas fa-check-circle text-success"></i> {{ attendance_present }} Classes Attended</li>
+                        <li><i class="fas fa-times-circle text-danger"></i> {{ attendance_absent }} Classes Missed</li>
+                        <li><i class="fas fa-clipboard-check text-info"></i> {{ total_attendance }} Total Classes</li>
+                    </ul>
+                    {% if attendance_percentage < 75 %}
+                    <div class="alert alert-warning mt-3">
+                        <i class="fas fa-exclamation-triangle"></i> <strong>Attention!</strong> Your attendance is below 75%. Please attend more classes to meet the requirement.
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script>
+// Calculate attendance percentage
+{% if total_attendance > 0 %}
+var attendancePercentage = ({{ attendance_present }} / {{ total_attendance }}) * 100;
+{% else %}
+var attendancePercentage = 0;
+{% endif %}
+
+// Attendance Pie Chart
+var ctx = document.getElementById('attendanceChart').getContext('2d');
+var attendanceChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Present', 'Absent'],
+        datasets: [{
+            data: [{{ attendance_present }}, {{ attendance_absent }}],
+            backgroundColor: [
+                'rgba(75, 192, 192, 0.8)',
+                'rgba(255, 99, 132, 0.8)'
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 1)',
+                'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    padding: 15,
+                    font: { size: 12 }
+                }
+            },
+            title: {
+                display: true,
+                text: 'Your Attendance Distribution',
+                font: { size: 14 }
+            }
+        }
+    }
+});
+</script>
+
 {% endblock %}

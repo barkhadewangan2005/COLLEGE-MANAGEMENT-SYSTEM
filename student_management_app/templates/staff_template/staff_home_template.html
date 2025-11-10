@@ -16,9 +16,145 @@
             <div class="small-box bg-danger"><div class="inner"><h3>{{ leave_count }}</h3><p>Approved Leaves</p></div><div class="icon"><i class="fas fa-calendar-alt"></i></div></div>
         </div>
     </div>
-    <div class="card">
-        <div class="card-header"><h3 class="card-title">Welcome to Staff Dashboard</h3></div>
-        <div class="card-body"><p>Use the menu to manage attendance, add results, and more.</p></div>
+    <!-- Charts Row -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header border-transparent">
+                    <h3 class="card-title"><i class="fas fa-chart-pie"></i> Attendance Overview</h3>
+                </div>
+                <div class="card-body">
+                    <canvas id="attendanceChart" style="height: 250px;"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header border-transparent">
+                    <h3 class="card-title"><i class="fas fa-chart-line"></i> My Statistics</h3>
+                </div>
+                <div class="card-body">
+                    <canvas id="statsChart" style="height: 250px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Card -->
+    <div class="card card-success card-outline">
+        <div class="card-header">
+            <h3 class="card-title"><i class="fas fa-home"></i> Welcome to Staff Dashboard</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-tasks"></i> Quick Actions</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-chevron-right text-primary"></i> <a href="{% url 'staff_take_attendance' %}">Take Attendance</a></li>
+                        <li><i class="fas fa-chevron-right text-success"></i> <a href="{% url 'staff_add_result' %}">Add Student Results</a></li>
+                        <li><i class="fas fa-chevron-right text-warning"></i> <a href="{% url 'staff_apply_leave' %}">Apply for Leave</a></li>
+                        <li><i class="fas fa-chevron-right text-info"></i> <a href="{% url 'staff_feedback' %}">Send Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5><i class="fas fa-info-circle"></i> Your Overview</h5>
+                    <p>Manage your classes efficiently from this dashboard.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success"></i> {{ students_count }} Students under your subjects</li>
+                        <li><i class="fas fa-check-circle text-success"></i> {{ subject_count }} Subjects assigned to you</li>
+                        <li><i class="fas fa-check-circle text-success"></i> {{ attendance_count }} Attendance records taken</li>
+                        <li><i class="fas fa-check-circle text-success"></i> {{ leave_count }} Approved leaves</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script>
+// Attendance Overview Chart
+var ctx1 = document.getElementById('attendanceChart').getContext('2d');
+var attendanceChart = new Chart(ctx1, {
+    type: 'doughnut',
+    data: {
+        labels: ['Attendance Taken', 'Pending'],
+        datasets: [{
+            data: [{{ attendance_count }}, {{ subject_count|add:"-attendance_count"|default:"0" }}],
+            backgroundColor: [
+                'rgba(75, 192, 192, 0.8)',
+                'rgba(255, 159, 64, 0.8)'
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    padding: 15,
+                    font: { size: 12 }
+                }
+            },
+            title: {
+                display: true,
+                text: 'Attendance Status',
+                font: { size: 14 }
+            }
+        }
+    }
+});
+
+// Statistics Chart
+var ctx2 = document.getElementById('statsChart').getContext('2d');
+var statsChart = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+        labels: ['Students', 'Subjects', 'Attendance', 'Leaves'],
+        datasets: [{
+            label: 'Count',
+            data: [{{ students_count }}, {{ subject_count }}, {{ attendance_count }}, {{ leave_count }}],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.8)',
+                'rgba(75, 192, 192, 0.8)',
+                'rgba(255, 206, 86, 0.8)',
+                'rgba(255, 99, 132, 0.8)'
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: { stepSize: 1 }
+            }
+        },
+        plugins: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Your Statistics Overview',
+                font: { size: 14 }
+            }
+        }
+    }
+});
+</script>
+
 {% endblock %}

@@ -44,11 +44,11 @@ def registration(request):
     return render(request, 'registration.html')
 
 def doRegistration(request):
-    first_name = request.GET.get('first_name')
-    last_name = request.GET.get('last_name')
-    email_id = request.GET.get('email')
-    password = request.GET.get('password')
-    confirm_password = request.GET.get('confirmPassword')
+    first_name = request.POST.get('first_name')
+    last_name = request.POST.get('last_name')
+    email_id = request.POST.get('email')
+    password = request.POST.get('password')
+    confirm_password = request.POST.get('confirmPassword')
 
     if not (email_id and password and confirm_password):
         messages.error(request, 'Please provide all the details!!')

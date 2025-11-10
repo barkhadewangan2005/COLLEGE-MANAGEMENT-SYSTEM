@@ -93,7 +93,8 @@
                     {% endfor %}
                 {% endif %}
 
-                <form method="get" action="{% url 'doRegistration' %}">
+                <form method="post" action="{% url 'doRegistration' %}">
+                    {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="first_name" class="form-label">First Name</label>
@@ -106,11 +107,16 @@
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="john.student@college.com" required>
+                        <small class="text-muted">Use format: name.student@college.com or name.staff@college.com</small>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
                     </div>
                     <div class="mb-3">
                         <label for="user_type" class="form-label">Register As</label>
