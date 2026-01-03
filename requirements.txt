@@ -4,6 +4,32 @@ django>=5.2.8
 # Image Processing
 pillow
 
+# PDF Generation
+reportlab>=4.0.7
+
+# Excel Export/Import
+openpyxl>=3.1.2
+xlsxwriter>=3.1.9
+
+# REST API
+djangorestframework>=3.14.0
+djangorestframework-simplejwt>=5.3.1
+
+# Task Queue (for async tasks)
+celery>=5.3.4
+django-celery-beat>=2.5.0
+django-celery-results>=2.5.1
+
+# Email
+django-ses>=3.5.2
+
+# Forms & Validation
+django-crispy-forms>=2.1
+crispy-bootstrap4>=2.0.0
+
+# Pagination & Filtering
+django-filter>=23.5
+
 # Development Tools
 django-debug-toolbar
 
@@ -15,6 +41,9 @@ whitenoise>=6.6.0
 django-redis>=5.4.0
 redis>=5.0.1
 
-# Security & Monitoring (Optional but Recommended)
-# sentry-sdk>=1.40.0
-# django-cors-headers>=4.3.1
+# Security & Monitoring
+django-cors-headers>=4.3.1
+django-ratelimit>=4.1.0
+
+# Utilities
+python-dateutil>=2.8.2

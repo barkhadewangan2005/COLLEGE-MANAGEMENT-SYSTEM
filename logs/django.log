@@ -1,0 +1,26 @@
+# Django Logs
+INFO 2025-12-31 02:16:21,154 autoreload Watching for file changes with StatReloader
+INFO 2025-12-31 02:17:05,579 autoreload Watching for file changes with StatReloader
+INFO 2025-12-31 02:17:29,004 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2025-12-31 02:17:34,057 basehttp "GET /login HTTP/1.1" 200 17823
+INFO 2025-12-31 02:17:36,872 basehttp "GET /registration HTTP/1.1" 200 19750
+INFO 2025-12-31 02:17:55,489 basehttp "POST /doRegistration HTTP/1.1" 200 20227
+INFO 2025-12-31 02:17:59,165 basehttp "GET /login HTTP/1.1" 200 17823
+INFO 2025-12-31 02:18:06,149 basehttp "GET /doLogin?email=anishgupta4099%40gmail.com&password=123456 HTTP/1.1" 200 18217
+INFO 2025-12-31 02:18:10,363 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2025-12-31 02:18:18,979 basehttp "GET /login HTTP/1.1" 200 17823
+INFO 2025-12-31 02:18:25,021 basehttp "GET /doLogin?email=anishgupta4099%40gmail.com&password=123456 HTTP/1.1" 200 18217
+INFO 2025-12-31 02:18:31,382 basehttp "GET /registration HTTP/1.1" 200 19750
+INFO 2025-12-31 02:18:58,017 basehttp "POST /doRegistration HTTP/1.1" 200 20226
+INFO 2025-12-31 02:19:11,563 basehttp "GET /login HTTP/1.1" 200 17823
+INFO 2025-12-31 02:19:25,438 basehttp "GET /doLogin?email=anishgaming2848%40gmail.com&password=825410 HTTP/1.1" 200 18218
+INFO 2025-12-31 02:20:45,300 autoreload C:\Users\PC-ASUS\Downloads\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\views.py changed, reloading.
+INFO 2025-12-31 02:20:46,715 autoreload Watching for file changes with StatReloader
+INFO 2025-12-31 02:24:51,966 basehttp "GET /doLogin?email=anishgupta4099%40gmail.com&password=123456 HTTP/1.1" 302 0
+INFO 2025-12-31 02:24:52,114 basehttp "GET /login HTTP/1.1" 200 18307
+INFO 2025-12-31 02:24:54,787 basehttp "GET /registration HTTP/1.1" 200 19750
+INFO 2025-12-31 02:25:19,617 basehttp "POST /doRegistration HTTP/1.1" 302 0
+INFO 2025-12-31 02:25:19,683 basehttp "GET /login HTTP/1.1" 200 18325
+INFO 2025-12-31 02:25:33,548 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2025-12-31 02:25:33,743 basehttp "GET /student_home/ HTTP/1.1" 200 24839
+WARNING 2025-12-31 02:25:33,787 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969

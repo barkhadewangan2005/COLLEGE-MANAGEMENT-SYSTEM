@@ -42,8 +42,9 @@
                         <div class="progress" style="height: 25px;">
                             <div class="progress-bar {% if attendance_percentage >= 75 %}bg-success{% elif attendance_percentage >= 60 %}bg-warning{% else %}bg-danger{% endif %}" 
                                  role="progressbar" 
+                                 title="Attendance Progress: {{ attendance_percentage|floatformat:1 }}%"
                                  style="width: {{ attendance_percentage }}%;" 
-                                 aria-valuenow="{{ attendance_percentage }}" 
+                                 aria-valuenow="{{ attendance_percentage|floatformat:0 }}" 
                                  aria-valuemin="0" 
                                  aria-valuemax="100">
                                 {{ attendance_percentage|floatformat:1 }}%

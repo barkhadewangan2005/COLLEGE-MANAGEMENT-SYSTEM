@@ -178,6 +178,101 @@ class StudentResult(models.Model):
     objects = models.Manager()
 
 
+class Timetable(models.Model):
+    """Model for class timetable/schedule"""
+    id = models.AutoField(primary_key=True)
+    subject = models.ForeignKey(Subjects, on_delete=models.CASCADE)
+    course = models.ForeignKey(Courses, on_delete=models.CASCADE)
+    session_year = models.ForeignKey(SessionYearModel, on_delete=models.CASCADE)
+    day_of_week = models.CharField(max_length=20, choices=[
+        ('Monday', 'Monday'),
+        ('Tuesday', 'Tuesday'),
+        ('Wednesday', 'Wednesday'),
+        ('Thursday', 'Thursday'),
+        ('Friday', 'Friday'),
+        ('Saturday', 'Saturday'),
+    ])
+    start_time = models.TimeField()
+    end_time = models.TimeField()
+    room_number = models.CharField(max_length=50, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = models.Manager()
+
+    class Meta:
+        ordering = ['day_of_week', 'start_time']
+
+    def __str__(self):
+        return f"{self.subject.subject_name} - {self.day_of_week} {self.start_time}"
+
+
+class Announcement(models.Model):
+    """Model for system-wide announcements"""
+    id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=255)
+    message = models.TextField()
+    target_audience = models.CharField(max_length=20, choices=[
+        ('all', 'All'),
+        ('students', 'Students'),
+        ('staff', 'Staff'),
+        ('admin', 'Admin'),
+    ])
+    created_by = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = models.Manager()
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return self.title
+
+
+class Notification(models.Model):
+    """Unified notification model for all users"""
+    id = models.AutoField(primary_key=True)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    title = models.CharField(max_length=255)
+    message = models.TextField()
+    notification_type = models.CharField(max_length=50, choices=[
+        ('attendance', 'Attendance Alert'),
+        ('leave', 'Leave Update'),
+        ('result', 'Result Published'),
+        ('announcement', 'Announcement'),
+        ('feedback', 'Feedback Reply'),
+        ('general', 'General'),
+    ])
+    is_read = models.BooleanField(default=False)
+    link = models.CharField(max_length=255, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    objects = models.Manager()
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"{self.user.username} - {self.title}"
+
+
+class ActivityLog(models.Model):
+    """Log for tracking user activities"""
+    id = models.AutoField(primary_key=True)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    action = models.CharField(max_length=255)
+    description = models.TextField()
+    ip_address = models.GenericIPAddressField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    objects = models.Manager()
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"{self.user.username} - {self.action}"
+
+
 #Creating Django Signals
 @receiver(post_save, sender=CustomUser)
 

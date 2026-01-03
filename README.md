@@ -1,4 +1,4 @@
-# 🎓 College Management System
+iis# 🎓 College Management System
 
 A comprehensive, modern college management system built with Django 5.2.8 that streamlines academic administration with interactive dashboards, real-time analytics, and role-based access control.
 

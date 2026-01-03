@@ -108,7 +108,7 @@ def add_staff_save(request):
             user.save()
             messages.success(request, "Staff Added Successfully!")
             return redirect('add_staff')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Add Staff!")
             return redirect('add_staff')
 
@@ -158,7 +158,7 @@ def edit_staff_save(request):
             messages.success(request, "Staff Updated Successfully.")
             return redirect('/edit_staff/'+staff_id)
 
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Update Staff.")
             return redirect('/edit_staff/'+staff_id)
 
@@ -169,7 +169,7 @@ def delete_staff(request, staff_id):
         staff.delete()
         messages.success(request, "Staff Deleted Successfully.")
         return redirect('manage_staff')
-    except:
+    except Exception as e:
         messages.error(request, "Failed to Delete Staff.")
         return redirect('manage_staff')
 
@@ -189,7 +189,7 @@ def add_course_save(request):
             course_model.save()
             messages.success(request, "Course Added Successfully!")
             return redirect('add_course')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Add Course!")
             return redirect('add_course')
 
@@ -226,7 +226,7 @@ def edit_course_save(request):
             messages.success(request, "Course Updated Successfully.")
             return redirect('/edit_course/'+course_id)
 
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Update Course.")
             return redirect('/edit_course/'+course_id)
 
@@ -237,7 +237,7 @@ def delete_course(request, course_id):
         course.delete()
         messages.success(request, "Course Deleted Successfully.")
         return redirect('manage_course')
-    except:
+    except Exception as e:
         messages.error(request, "Failed to Delete Course.")
         return redirect('manage_course')
 
@@ -267,7 +267,7 @@ def add_session_save(request):
             sessionyear.save()
             messages.success(request, "Session Year added Successfully!")
             return redirect("add_session")
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Add Session Year")
             return redirect("add_session")
 
@@ -297,7 +297,7 @@ def edit_session_save(request):
 
             messages.success(request, "Session Year Updated Successfully.")
             return redirect('/edit_session/'+session_id)
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Update Session Year.")
             return redirect('/edit_session/'+session_id)
 
@@ -308,7 +308,7 @@ def delete_session(request, session_id):
         session.delete()
         messages.success(request, "Session Deleted Successfully.")
         return redirect('manage_session')
-    except:
+    except Exception as e:
         messages.error(request, "Failed to Delete Session.")
         return redirect('manage_session')
 
@@ -359,7 +359,7 @@ def add_student_save(request):
             user.save()
             messages.success(request, "Student Added Successfully!")
             return redirect('add_student')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Add Student!")
             return redirect('add_student')
 
@@ -436,7 +436,7 @@ def edit_student_save(request):
             # Delete student_id GET
             messages.success(request, "Student Updated Successfully.")
             return redirect('/edit_student/'+student_id)
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Update Student.")
             return redirect('/edit_student/'+student_id)
 
@@ -447,7 +447,7 @@ def delete_student(request, student_id):
         student.delete()
         messages.success(request, "Student Deleted Successfully.")
         return redirect('manage_student')
-    except:
+    except Exception as e:
         messages.error(request, "Failed to Delete Student.")
         return redirect('manage_student')
 
@@ -479,7 +479,7 @@ def add_subject_save(request):
             subject.save()
             messages.success(request, "Subject Added Successfully!")
             return redirect('add_subject')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Add Subject!")
             return redirect('add_subject')
 
@@ -530,7 +530,7 @@ def edit_subject_save(request):
             # return redirect('/edit_subject/'+subject_id)
             return HttpResponseRedirect(reverse("edit_subject", kwargs={"subject_id":subject_id}))
 
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Update Subject.")
             return HttpResponseRedirect(reverse("edit_subject", kwargs={"subject_id":subject_id}))
             # return redirect('/edit_subject/'+subject_id)
@@ -542,7 +542,7 @@ def delete_subject(request, subject_id):
         subject.delete()
         messages.success(request, "Subject Deleted Successfully.")
         return redirect('manage_subject')
-    except:
+    except Exception as e:
         messages.error(request, "Failed to Delete Subject.")
         return redirect('manage_subject')
 
@@ -586,7 +586,7 @@ def student_feedback_message_reply(request):
         feedback.save()
         return HttpResponse("True")
 
-    except:
+    except Exception as e:
         return HttpResponse("False")
 
 
@@ -609,7 +609,7 @@ def staff_feedback_message_reply(request):
         feedback.save()
         return HttpResponse("True")
 
-    except:
+    except Exception as e:
         return HttpResponse("False")
 
 
@@ -735,6 +735,6 @@ def admin_profile_update(request):
             customuser.save()
             messages.success(request, "Profile Updated Successfully")
             return redirect('admin_profile')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Update Profile")
             return redirect('admin_profile')

@@ -21,7 +21,7 @@ class AddStudentForm(forms.Form):
         for course in courses:
             small_course = (course.id, course.course_name)
             course_list.append(small_course)
-    except:
+    except Exception as e:
         course_list = []
     
     # For Displaying Session Years
@@ -31,7 +31,7 @@ class AddStudentForm(forms.Form):
         for session_year in session_years:
             small_session_year = (session_year.id, str(session_year.session_start_year) + " to " + str(session_year.session_end_year))
             session_year_list.append(small_session_year)
-    except:
+    except Exception as e:
         session_year_list = []
     
     gender_list = (
@@ -59,7 +59,7 @@ class EditStudentForm(forms.Form):
         for course in courses:
             small_course = (course.id, course.course_name)
             course_list.append(small_course)
-    except:
+    except Exception as e:
         course_list = []
 
     # For Displaying Session Years
@@ -69,7 +69,7 @@ class EditStudentForm(forms.Form):
         for session_year in session_years:
             small_session_year = (session_year.id, str(session_year.session_start_year) + " to " + str(session_year.session_end_year))
             session_year_list.append(small_session_year)
-    except:
+    except Exception as e:
         session_year_list = []
 
     gender_list = (

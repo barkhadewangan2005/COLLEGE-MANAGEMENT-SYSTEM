@@ -134,7 +134,7 @@ def student_apply_leave_save(request):
             leave_report.save()
             messages.success(request, "Applied for Leave.")
             return redirect('student_apply_leave')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Apply Leave")
             return redirect('student_apply_leave')
 
@@ -163,7 +163,7 @@ def student_feedback_save(request):
             add_feedback.save()
             messages.success(request, "Feedback Sent.")
             return redirect('student_feedback')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Send Feedback.")
             return redirect('student_feedback')
 
@@ -203,7 +203,7 @@ def student_profile_update(request):
             
             messages.success(request, "Profile Updated Successfully")
             return redirect('student_profile')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Update Profile")
             return redirect('student_profile')
 

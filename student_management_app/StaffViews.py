@@ -109,7 +109,7 @@ def staff_apply_leave_save(request):
             leave_report.save()
             messages.success(request, "Applied for Leave.")
             return redirect('staff_apply_leave')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Apply Leave")
             return redirect('staff_apply_leave')
 
@@ -133,7 +133,7 @@ def staff_feedback_save(request):
             add_feedback.save()
             messages.success(request, "Feedback Sent.")
             return redirect('staff_feedback')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Send Feedback.")
             return redirect('staff_feedback')
 
@@ -197,7 +197,7 @@ def save_attendance_data(request):
                                                  status=stud['status'])
             attendance_report.save()
         return HttpResponse("OK")
-    except:
+    except Exception as e:
         return HttpResponse("Error")
 
 
@@ -284,7 +284,7 @@ def update_attendance_data(request):
 
             attendance_report.save()
         return HttpResponse("OK")
-    except:
+    except Exception as e:
         return HttpResponse("Error")
 
 
@@ -323,7 +323,7 @@ def staff_profile_update(request):
 
             messages.success(request, "Profile Updated Successfully")
             return redirect('staff_profile')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Update Profile")
             return redirect('staff_profile')
 
@@ -372,6 +372,6 @@ def staff_add_result_save(request):
                 result.save()
                 messages.success(request, "Result Added Successfully!")
                 return redirect('staff_add_result')
-        except:
+        except Exception as e:
             messages.error(request, "Failed to Add Result!")
             return redirect('staff_add_result')
