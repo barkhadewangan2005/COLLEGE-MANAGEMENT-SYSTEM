@@ -1799,3 +1799,130 @@ INFO 2026-01-04 23:15:47,046 basehttp "GET /login HTTP/1.1" 200 17965
 INFO 2026-01-04 23:15:59,767 basehttp "POST /doLogin HTTP/1.1" 302 0
 INFO 2026-01-04 23:15:59,876 basehttp "GET /staff_home/ HTTP/1.1" 200 27451
 WARNING 2026-01-04 23:15:59,936 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:51:03,586 autoreload Watching for file changes with StatReloader
+INFO 2026-01-04 23:51:10,144 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-04 23:51:10,209 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-04 23:51:10,222 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-04 23:51:10,416 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-01-04 23:51:10,417 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+WARNING 2026-01-04 23:51:10,584 log Not Found: /favicon.ico
+WARNING 2026-01-04 23:51:10,587 basehttp "GET /favicon.ico HTTP/1.1" 404 40093
+INFO 2026-01-04 23:51:12,309 basehttp "GET /login HTTP/1.1" 200 17965
+INFO 2026-01-04 23:51:25,194 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 23:51:25,295 basehttp "GET /student_home/ HTTP/1.1" 200 26609
+WARNING 2026-01-04 23:51:25,380 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:51:36,968 basehttp "GET /student_view_attendance/ HTTP/1.1" 200 21193
+WARNING 2026-01-04 23:51:37,031 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-04 23:51:41,940 log Internal Server Error: /student_view_attendance_post/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py", line 80, in student_view_attendance_post
+    start_date_parse = datetime.datetime.strptime(start_date, '%Y-%m-%d').date()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not None
+ERROR 2026-01-04 23:51:42,023 basehttp "POST /student_view_attendance_post/ HTTP/1.1" 500 89926
+ERROR 2026-01-04 23:51:53,528 log Internal Server Error: /student_view_attendance_post/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py", line 80, in student_view_attendance_post
+    start_date_parse = datetime.datetime.strptime(start_date, '%Y-%m-%d').date()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not None
+ERROR 2026-01-04 23:51:53,583 basehttp "POST /student_view_attendance_post/ HTTP/1.1" 500 89925
+INFO 2026-01-04 23:52:29,897 basehttp "GET /student_apply_leave/ HTTP/1.1" 200 21008
+WARNING 2026-01-04 23:52:29,958 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:52:50,038 basehttp "POST /student_apply_leave_save/ HTTP/1.1" 302 0
+INFO 2026-01-04 23:52:50,095 basehttp "GET /student_apply_leave/ HTTP/1.1" 200 21460
+WARNING 2026-01-04 23:52:50,139 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:52:52,617 basehttp "GET /student_feedback/ HTTP/1.1" 200 20906
+WARNING 2026-01-04 23:52:52,675 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:53:06,172 basehttp "POST /student_feedback_save/ HTTP/1.1" 302 0
+INFO 2026-01-04 23:53:06,239 basehttp "GET /student_feedback/ HTTP/1.1" 200 21367
+WARNING 2026-01-04 23:53:06,290 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:53:08,350 basehttp "GET /student_view_result/ HTTP/1.1" 200 21098
+WARNING 2026-01-04 23:53:08,412 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:53:11,014 basehttp "GET /student_profile/ HTTP/1.1" 200 21994
+WARNING 2026-01-04 23:53:11,082 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:53:25,240 basehttp "GET /student_home/ HTTP/1.1" 200 26609
+WARNING 2026-01-04 23:53:25,308 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:53:27,318 basehttp "GET /student_view_attendance/ HTTP/1.1" 200 21193
+WARNING 2026-01-04 23:53:27,379 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-04 23:53:32,900 log Internal Server Error: /student_view_attendance_post/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py", line 80, in student_view_attendance_post
+    start_date_parse = datetime.datetime.strptime(start_date, '%Y-%m-%d').date()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not None
+ERROR 2026-01-04 23:53:32,959 basehttp "POST /student_view_attendance_post/ HTTP/1.1" 500 89925
+INFO 2026-01-04 23:54:09,234 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-04 23:54:11,000 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-04 23:54:30,534 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 23:54:30,631 basehttp "GET /student_home/ HTTP/1.1" 200 26609
+WARNING 2026-01-04 23:54:30,688 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:54:35,268 basehttp "GET /student_view_attendance/ HTTP/1.1" 200 21193
+WARNING 2026-01-04 23:54:35,331 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-04 23:54:38,679 log Internal Server Error: /student_view_attendance_post/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py", line 80, in student_view_attendance_post
+    start_date_parse = datetime.datetime.strptime(start_date, '%Y-%m-%d').date()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not None
+ERROR 2026-01-04 23:54:38,740 basehttp "POST /student_view_attendance_post/ HTTP/1.1" 500 89925
+INFO 2026-01-04 23:57:19,964 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-04 23:57:21,618 autoreload Watching for file changes with StatReloader
+INFO 2026-01-04 23:57:42,227 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-04 23:57:42,549 log Not Found: /favicon.ico
+WARNING 2026-01-04 23:57:42,550 basehttp "GET /favicon.ico HTTP/1.1" 404 40093
+INFO 2026-01-04 23:57:44,555 basehttp "GET /login HTTP/1.1" 200 17965
+INFO 2026-01-04 23:58:03,486 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 23:58:03,573 basehttp "GET /student_home/ HTTP/1.1" 200 26609
+WARNING 2026-01-04 23:58:03,631 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:58:12,041 basehttp "GET /student_view_attendance/ HTTP/1.1" 200 22006
+WARNING 2026-01-04 23:58:12,106 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:58:45,537 basehttp "POST /student_view_attendance_post/ HTTP/1.1" 200 21823
+WARNING 2026-01-04 23:58:45,598 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:58:55,003 basehttp "GET /student_apply_leave/ HTTP/1.1" 200 21008
+WARNING 2026-01-04 23:58:55,057 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:58:56,595 basehttp "GET /student_feedback/ HTTP/1.1" 200 20906
+WARNING 2026-01-04 23:58:56,647 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:58:57,640 basehttp "GET /student_view_result/ HTTP/1.1" 200 21098
+WARNING 2026-01-04 23:58:57,688 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:58:59,771 basehttp "GET /student_profile/ HTTP/1.1" 200 21994
+WARNING 2026-01-04 23:58:59,833 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 23:59:02,219 basehttp "GET /student_home/ HTTP/1.1" 200 26609
+WARNING 2026-01-04 23:59:02,275 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-05 00:01:22,965 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-05 00:01:24,436 autoreload Watching for file changes with StatReloader
+INFO 2026-01-05 00:01:27,529 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-05 00:01:28,420 autoreload Watching for file changes with StatReloader
+INFO 2026-01-05 00:02:03,189 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-05 00:02:04,954 basehttp "GET /login HTTP/1.1" 200 17965
+INFO 2026-01-05 00:02:22,270 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-05 00:02:22,374 basehttp "GET /student_home/ HTTP/1.1" 200 26820
+WARNING 2026-01-05 00:02:22,430 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-05 00:02:27,067 basehttp "GET /student_view_subjects/ HTTP/1.1" 200 22263
+WARNING 2026-01-05 00:02:27,136 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-05 00:02:35,944 basehttp "GET /student_feedback/ HTTP/1.1" 200 21117
+WARNING 2026-01-05 00:02:36,002 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-05 00:02:37,178 basehttp "GET /student_apply_leave/ HTTP/1.1" 200 21219
+WARNING 2026-01-05 00:02:37,253 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-05 00:02:38,167 basehttp "GET /student_view_attendance/ HTTP/1.1" 200 22217
+WARNING 2026-01-05 00:02:38,236 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-05 00:02:46,594 basehttp "GET /student_home/ HTTP/1.1" 200 26820
+WARNING 2026-01-05 00:02:46,653 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-05 00:02:58,392 basehttp "GET /student_view_subjects/ HTTP/1.1" 200 22263
+WARNING 2026-01-05 00:02:58,456 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969

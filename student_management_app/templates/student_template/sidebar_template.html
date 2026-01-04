@@ -1,0 +1,58 @@
+{% load static %}
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="navigation" data-accordion="false">
+    <li class="nav-item">
+        <a href="{% url 'student_home' %}"
+            class="nav-link {% if request.path == '/student_home/' %} active {% endif %}">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>Dashboard</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="{% url 'student_view_attendance' %}"
+            class="nav-link {% if request.path == '/student_view_attendance/' or request.path == '/student_view_attendance_post/' %} active {% endif %}">
+            <i class="nav-icon fas fa-calendar-check"></i>
+            <p>View Attendance</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="{% url 'student_apply_leave' %}"
+            class="nav-link {% if request.path == '/student_apply_leave/' %} active {% endif %}">
+            <i class="nav-icon fas fa-envelope-open"></i>
+            <p>Apply for Leave</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="{% url 'student_feedback' %}"
+            class="nav-link {% if request.path == '/student_feedback/' %} active {% endif %}">
+            <i class="nav-icon fas fa-comment-dots"></i>
+            <p>Send Feedback</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="{% url 'student_view_result' %}"
+            class="nav-link {% if request.path == '/student_view_result/' %} active {% endif %}">
+            <i class="nav-icon fas fa-poll-h"></i>
+            <p>View Results</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="{% url 'student_view_subjects' %}"
+            class="nav-link {% if request.path == '/student_view_subjects/' %} active {% endif %}">
+            <i class="nav-icon fas fa-book"></i>
+            <p>My Subjects & Staff</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="{% url 'student_profile' %}"
+            class="nav-link {% if request.path == '/student_profile/' %} active {% endif %}">
+            <i class="nav-icon fas fa-user-edit"></i>
+            <p>My Profile</p>
+        </a>
+    </li>
+</ul>

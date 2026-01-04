@@ -76,9 +76,18 @@ def student_view_attendance_post(request):
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
 
-        # Parsing the date data into Python object
-        start_date_parse = datetime.datetime.strptime(start_date, '%Y-%m-%d').date()
-        end_date_parse = datetime.datetime.strptime(end_date, '%Y-%m-%d').date()
+        # Check if dates are provided
+        if not start_date or not end_date:
+            messages.error(request, "Please select both start and end dates.")
+            return redirect('student_view_attendance')
+
+        try:
+            # Parsing the date data into Python object
+            start_date_parse = datetime.datetime.strptime(start_date, '%Y-%m-%d').date()
+            end_date_parse = datetime.datetime.strptime(end_date, '%Y-%m-%d').date()
+        except ValueError:
+            messages.error(request, "Invalid date format.")
+            return redirect('student_view_attendance')
 
         # Getting all the Subject Data based on Selected Subject
         subject_obj = Subjects.objects.get(id=subject_id)
@@ -215,3 +224,14 @@ def student_view_result(request):
         "student_result": student_result,
     }
     return render(request, "student_template/student_view_result.html", context)
+
+
+def student_view_subjects(request):
+    student = Students.objects.get(admin=request.user.id)
+    course = student.course_id
+    subjects = Subjects.objects.filter(course_id=course)
+    
+    context = {
+        "subjects": subjects
+    }
+    return render(request, "student_template/student_view_subjects.html", context)

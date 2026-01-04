@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block page_title %}Attendance Data{% endblock %}
+{% block main_content %}
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Attendance Data of {{ subject_obj.subject_name }}</h3>
+                    </div>
+                    <!-- /.card-header -->
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Attendance Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for attendance_report in attendance_reports %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{ attendance_report.attendance_id.attendance_date }}</td>
+                                    <td>
+                                        {% if attendance_report.status %}
+                                        <span class="badge badge-success">Present</span>
+                                        {% else %}
+                                        <span class="badge badge-danger">Absent</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+{% endblock main_content %}
