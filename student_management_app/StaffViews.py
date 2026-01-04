@@ -35,6 +35,10 @@ def staff_home(request):
     staff = Staffs.objects.get(admin=request.user.id)
     leave_count = LeaveReportStaff.objects.filter(staff_id=staff.id,
                                                   leave_status=1).count()
+    leave_pending = LeaveReportStaff.objects.filter(staff_id=staff.id,
+                                                   leave_status=0).count()
+    leave_rejected = LeaveReportStaff.objects.filter(staff_id=staff.id,
+                                                    leave_status=2).count()
 
     # Fetch Attendance Data by Subjects
     subject_list = []
@@ -61,6 +65,8 @@ def staff_home(request):
         "students_count": students_count,
         "attendance_count": attendance_count,
         "leave_count": leave_count,
+        "leave_pending": leave_pending,
+        "leave_rejected": leave_rejected,
         "subject_count": subject_count,
         "subject_list": subject_list,
         "attendance_list": attendance_list,

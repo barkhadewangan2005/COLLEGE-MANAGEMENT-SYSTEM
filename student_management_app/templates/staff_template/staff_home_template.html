@@ -107,68 +107,17 @@
     // Attendance Overview Chart
     var ctx1 = document.getElementById('attendanceChart').getContext('2d');
     var attendanceChart = new Chart(ctx1, {
-        type: 'doughnut',
-        data: {
-            labels: ['Attendance Taken', 'Pending'],
-            datasets: [{
-                data: [{{ attendance_count }}, {{ subject_count| add: "-attendance_count" |default: "0"
-        }
-    }],
-        backgroundColor: [
-        'rgba(75, 192, 192, 0.8)',
-        'rgba(255, 159, 64, 0.8)'
-    ],
-        borderColor: [
-        'rgba(75, 192, 192, 1)',
-        'rgba(255, 159, 64, 1)'
-    ],
-        borderWidth: 2
-        }]
-    },
-    options: {
-        responsive: true,
-            maintainAspectRatio: false,
-                plugins: {
-            legend: {
-                position: 'bottom',
-                    labels: {
-                    padding: 15,
-                        font: { size: 12 }
-                }
-            },
-            title: {
-                display: true,
-                    text: 'Attendance Status',
-                        font: { size: 14 }
-            }
-        }
-    }
-});
-
-    // Statistics Chart
-    var ctx2 = document.getElementById('statsChart').getContext('2d');
-    var statsChart = new Chart(ctx2, {
         type: 'bar',
         data: {
-            labels: ['Students', 'Subjects', 'Attendance', 'Leaves'],
-            datasets: [{
-                label: 'Count',
-                data: [{{ students_count }}, {{ subject_count }}, {{ attendance_count }}, { { leave_count } }],
-    backgroundColor: [
-        'rgba(54, 162, 235, 0.8)',
-        'rgba(75, 192, 192, 0.8)',
-        'rgba(255, 206, 86, 0.8)',
-        'rgba(255, 99, 132, 0.8)'
-    ],
-        borderColor: [
-            'rgba(54, 162, 235, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(255, 99, 132, 1)'
-        ],
-            borderWidth: 2
-        }]
-    },
+            labels: {{ subject_list| safe }},
+    datasets: [{
+        label: 'Attendance Taken',
+        data: {{ attendance_list| safe }},
+        backgroundColor: 'rgba(75, 192, 192, 0.8)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+            }]
+        },
     options: {
         responsive: true,
             maintainAspectRatio: false,
@@ -182,12 +131,53 @@
             legend: { display: false },
             title: {
                 display: true,
-                    text: 'Your Statistics Overview',
+                    text: 'Attendance Count by Subject',
                         font: { size: 14 }
             }
         }
     }
-});
+    });
+
+    // Statistics Chart
+    var ctx2 = document.getElementById('statsChart').getContext('2d');
+    var statsChart = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['Approved Leaves', 'Pending Leaves', 'Rejected Leaves'],
+            datasets: [{
+                data: [{{ leave_count }}, {{ leave_pending }}, {{ leave_rejected }}],
+    backgroundColor: [
+        'rgba(40, 167, 69, 0.8)', // Success/Green
+        'rgba(255, 193, 7, 0.8)', // Warning/Yellow
+        'rgba(220, 53, 69, 0.8)'  // Danger/Red
+    ],
+        borderColor: [
+            'rgba(40, 167, 69, 1)',
+            'rgba(255, 193, 7, 1)',
+            'rgba(220, 53, 69, 1)'
+        ],
+            borderWidth: 2
+            }]
+        },
+    options: {
+        responsive: true,
+            maintainAspectRatio: false,
+                plugins: {
+            legend: {
+                position: 'bottom',
+                    labels: {
+                    padding: 15,
+                        font: { size: 12 }
+                }
+            },
+            title: {
+                display: true,
+                    text: 'My Leave Statistics',
+                        font: { size: 14 }
+            }
+        }
+    }
+    });
 </script>
 
 {% endblock %}
