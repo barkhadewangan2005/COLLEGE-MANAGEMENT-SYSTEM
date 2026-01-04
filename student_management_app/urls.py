@@ -42,6 +42,9 @@ urlpatterns = [
     path('staff_profile_update/', StaffViews.staff_profile_update, name="staff_profile_update"),
     path('staff_add_result/', StaffViews.staff_add_result, name="staff_add_result"),
     path('staff_add_result_save/', StaffViews.staff_add_result_save, name="staff_add_result_save"),
+    path('staff_view_result/', StaffViews.staff_view_result, name="staff_view_result"),
+    path('staff_view_subjects/', StaffViews.staff_view_subjects, name="staff_view_subjects"),
+    path('staff_view_students/', StaffViews.staff_view_students, name="staff_view_students"),
     
     # URL for Admin
     path('admin_home/', HodViews.admin_home, name="admin_home"),

@@ -701,7 +701,7 @@ def admin_get_attendance_dates(request):
         data_small={"id":attendance_single.id, "attendance_date":str(attendance_single.attendance_date), "session_year_id":attendance_single.session_year_id.id}
         list_data.append(data_small)
 
-    return JsonResponse(json.dumps(list_data), content_type="application/json", safe=False)
+    return JsonResponse(list_data, safe=False)
 
 
 @csrf_exempt
@@ -715,10 +715,13 @@ def admin_get_attendance_student(request):
     list_data = []
 
     for student in attendance_data:
-        data_small={"id":student.student_id.admin.id, "name":student.student_id.admin.first_name+" "+student.student_id.admin.last_name, "status":student.status}
+        data_small={"id":student.student_id.admin.id, 
+                    "name":student.student_id.admin.first_name+" "+student.student_id.admin.last_name, 
+                    "username":student.student_id.admin.username,
+                    "status":student.status}
         list_data.append(data_small)
 
-    return JsonResponse(json.dumps(list_data), content_type="application/json", safe=False)
+    return JsonResponse(list_data, safe=False)
 
 
 def admin_profile(request):

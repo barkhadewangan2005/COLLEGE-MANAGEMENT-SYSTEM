@@ -79,7 +79,7 @@ def staff_take_attendance(request):
         "subjects": subjects,
         "session_years": session_years
     }
-    return render(request, "staff_template/take_attendance_template.html", context)
+    return render(request, "staff_template/staff_take_attendance.html", context)
 
 
 def staff_apply_leave(request):
@@ -89,7 +89,7 @@ def staff_apply_leave(request):
     context = {
         "leave_data": leave_data
     }
-    return render(request, "staff_template/staff_apply_leave_template.html", context)
+    return render(request, "staff_template/staff_apply_leave.html", context)
 
 
 def staff_apply_leave_save(request):
@@ -115,7 +115,7 @@ def staff_apply_leave_save(request):
 
 
 def staff_feedback(request):
-  return render(request, "staff_template/staff_feedback_template.html")
+  return render(request, "staff_template/staff_feedback.html")
 
 
 def staff_feedback_save(request):
@@ -143,7 +143,8 @@ def staff_feedback_save(request):
 def get_students(request):
   
     subject_id = request.POST.get("subject")
-    session_year = request.POST.get("session_year")
+    session_year = request.POST.get("session_year_id")
+    print(f"DEBUG: get_students called with subject={subject_id}, session_year={session_year}")
 
     # Students enroll to Course, Course has Subjects
     # Getting all data from subject model based on subject_id
@@ -159,10 +160,11 @@ def get_students(request):
 
     for student in students:
         data_small={"id":student.admin.id,
-                    "name":student.admin.first_name+" "+student.admin.last_name}
+                    "name":student.admin.first_name+" "+student.admin.last_name,
+                    "username":student.admin.username}
         list_data.append(data_small)
 
-    return JsonResponse(json.dumps(list_data), content_type="application/json", safe=False)
+    return JsonResponse(list_data, safe=False)
 
 
 
@@ -210,7 +212,7 @@ def staff_update_attendance(request):
         "subjects": subjects,
         "session_years": session_years
     }
-    return render(request, "staff_template/update_attendance_template.html", context)
+    return render(request, "staff_template/staff_update_attendance.html", context)
 
 @csrf_exempt
 def get_attendance_dates(request):
@@ -237,8 +239,7 @@ def get_attendance_dates(request):
                     "session_year_id":attendance_single.session_year_id.id}
         list_data.append(data_small)
 
-    return JsonResponse(json.dumps(list_data),
-                        content_type="application/json", safe=False)
+    return JsonResponse(list_data, safe=False)
 
 
 @csrf_exempt
@@ -254,12 +255,12 @@ def get_attendance_student(request):
 
     for student in attendance_data:
         data_small={"id":student.student_id.admin.id,
-                    "name":student.student_id.admin.first_name+" "+student.student_id.admin.last_name, "status":student.status}
+                    "name":student.student_id.admin.first_name+" "+student.student_id.admin.last_name, 
+                    "username":student.student_id.admin.username,
+                    "status":student.status}
         list_data.append(data_small)
 
-    return JsonResponse(json.dumps(list_data),
-                        content_type="application/json",
-                        safe=False)
+    return JsonResponse(list_data, safe=False)
 
 
 @csrf_exempt
@@ -332,11 +333,16 @@ def staff_profile_update(request):
 def staff_add_result(request):
     subjects = Subjects.objects.filter(staff_id=request.user.id)
     session_years = SessionYearModel.objects.all()
+    # Fetching all students belonging to the courses taught by this staff
+    course_id_list = subjects.values_list('course_id', flat=True).distinct()
+    students = Students.objects.filter(course_id__in=course_id_list)
+    
     context = {
         "subjects": subjects,
         "session_years": session_years,
+        "students": students,
     }
-    return render(request, "staff_template/add_result_template.html", context)
+    return render(request, "staff_template/staff_add_result.html", context)
 
 
 def staff_add_result_save(request):
@@ -363,7 +369,6 @@ def staff_add_result_save(request):
                 result.subject_exam_marks = exam_marks
                 result.save()
                 messages.success(request, "Result Updated Successfully!")
-                return redirect('staff_add_result')
             else:
                 result = StudentResult(student_id=student_obj,
                                        subject_id=subject_obj,
@@ -371,7 +376,34 @@ def staff_add_result_save(request):
                                        subject_assignment_marks=assignment_marks)
                 result.save()
                 messages.success(request, "Result Added Successfully!")
-                return redirect('staff_add_result')
+            return redirect('staff_add_result')
         except Exception as e:
             messages.error(request, "Failed to Add Result!")
             return redirect('staff_add_result')
+
+def staff_view_result(request):
+    staff_id = request.user.id
+    subjects = Subjects.objects.filter(staff_id=staff_id)
+    results = StudentResult.objects.filter(subject_id__in=subjects)
+    context = {
+        "results": results,
+    }
+    return render(request, "staff_template/staff_view_result.html", context)
+
+def staff_view_subjects(request):
+    staff_id = request.user.id
+    subjects = Subjects.objects.filter(staff_id=staff_id)
+    context = {
+        "subjects": subjects,
+    }
+    return render(request, "staff_template/staff_view_subjects.html", context)
+
+def staff_view_students(request):
+    staff_id = request.user.id
+    subjects = Subjects.objects.filter(staff_id=staff_id)
+    course_id_list = subjects.values_list('course_id', flat=True).distinct()
+    students = Students.objects.filter(course_id__in=course_id_list)
+    context = {
+        "students": students,
+    }
+    return render(request, "staff_template/staff_view_students.html", context)
