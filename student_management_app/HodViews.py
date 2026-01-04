@@ -82,6 +82,18 @@ def admin_home(request):
         "student_attendance_present_list": student_attendance_present_list,
         "student_attendance_leave_list": student_attendance_leave_list,
         "student_name_list": student_name_list,
+        "student_leave_count": LeaveReportStudent.objects.count(),
+        "student_leave_approved": LeaveReportStudent.objects.filter(leave_status=1).count(),
+        "student_leave_pending": LeaveReportStudent.objects.filter(leave_status=0).count(),
+        "student_leave_rejected": LeaveReportStudent.objects.filter(leave_status=2).count(),
+        "staff_leave_count": LeaveReportStaff.objects.count(),
+        "staff_leave_approved": LeaveReportStaff.objects.filter(leave_status=1).count(),
+        "staff_leave_pending": LeaveReportStaff.objects.filter(leave_status=0).count(),
+        "staff_leave_rejected": LeaveReportStaff.objects.filter(leave_status=2).count(),
+        "student_feedback_count": FeedBackStudent.objects.count(),
+        "student_feedback_replied": FeedBackStudent.objects.exclude(feedback_reply="").count(),
+        "staff_feedback_count": FeedBackStaffs.objects.count(),
+        "staff_feedback_replied": FeedBackStaffs.objects.exclude(feedback_reply="").count(),
     }
     return render(request, "hod_template/home_content.html", context)
 

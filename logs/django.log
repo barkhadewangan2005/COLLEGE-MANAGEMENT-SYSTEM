@@ -24,3 +24,344 @@ INFO 2025-12-31 02:25:19,683 basehttp "GET /login HTTP/1.1" 200 18325
 INFO 2025-12-31 02:25:33,548 basehttp "POST /doLogin HTTP/1.1" 302 0
 INFO 2025-12-31 02:25:33,743 basehttp "GET /student_home/ HTTP/1.1" 200 24839
 WARNING 2025-12-31 02:25:33,787 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 16:47:48,426 autoreload Watching for file changes with StatReloader
+INFO 2026-01-04 16:53:23,869 autoreload Watching for file changes with StatReloader
+INFO 2026-01-04 16:54:33,812 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-04 16:54:33,907 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-04 16:54:33,913 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-04 16:54:33,943 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-04 16:54:34,136 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2026-01-04 16:54:34,275 log Not Found: /favicon.ico
+WARNING 2026-01-04 16:54:34,278 basehttp "GET /favicon.ico HTTP/1.1" 404 39254
+INFO 2026-01-04 16:54:35,909 basehttp "GET /login HTTP/1.1" 200 17966
+ERROR 2026-01-04 16:55:14,495 log Internal Server Error: /doLogin
+Traceback (most recent call last):
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: student_management_app_customuser
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\views.py", line 34, in doLogin
+    user = CustomUser.objects.get(email=email_id)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\debug_toolbar\panels\sql\tracking.py", line 231, in execute
+    return self._record(super().execute, sql, params)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\debug_toolbar\panels\sql\tracking.py", line 157, in _record
+    return method(sql, params)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: student_management_app_customuser
+ERROR 2026-01-04 16:55:14,593 basehttp "POST /doLogin HTTP/1.1" 500 184725
+ERROR 2026-01-04 16:55:37,836 log Internal Server Error: /doLogin
+Traceback (most recent call last):
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: student_management_app_customuser
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\views.py", line 34, in doLogin
+    user = CustomUser.objects.get(email=email_id)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\debug_toolbar\panels\sql\tracking.py", line 231, in execute
+    return self._record(super().execute, sql, params)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\debug_toolbar\panels\sql\tracking.py", line 157, in _record
+    return method(sql, params)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\hriti\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: student_management_app_customuser
+ERROR 2026-01-04 16:55:37,929 basehttp "POST /doLogin HTTP/1.1" 500 184722
+INFO 2026-01-04 17:00:36,703 autoreload Watching for file changes with StatReloader
+INFO 2026-01-04 17:05:16,199 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-04 17:05:16,322 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 30101
+INFO 2026-01-04 17:05:16,394 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14879
+INFO 2026-01-04 17:05:16,446 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2026-01-04 17:05:16,489 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4700
+WARNING 2026-01-04 17:05:16,602 log Not Found: /favicon.ico
+WARNING 2026-01-04 17:05:16,605 basehttp "GET /favicon.ico HTTP/1.1" 404 39254
+INFO 2026-01-04 17:06:36,897 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:06:36,919 basehttp "GET /login HTTP/1.1" 200 18311
+INFO 2026-01-04 17:06:59,263 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:06:59,286 basehttp "GET /login HTTP/1.1" 200 18311
+INFO 2026-01-04 17:07:06,128 basehttp "GET /registration HTTP/1.1" 200 19750
+INFO 2026-01-04 17:07:40,640 basehttp "POST /doRegistration HTTP/1.1" 302 0
+INFO 2026-01-04 17:07:40,668 basehttp "GET /login HTTP/1.1" 200 18325
+INFO 2026-01-04 17:07:52,885 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:07:53,146 basehttp "GET /admin_home/ HTTP/1.1" 200 27615
+WARNING 2026-01-04 17:07:53,219 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:11:16,589 autoreload Watching for file changes with StatReloader
+INFO 2026-01-04 17:11:31,984 basehttp "GET /login HTTP/1.1" 200 17964
+WARNING 2026-01-04 17:11:32,324 log Not Found: /favicon.ico
+WARNING 2026-01-04 17:11:32,326 basehttp "GET /favicon.ico HTTP/1.1" 404 39254
+INFO 2026-01-04 17:12:41,189 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:12:41,241 basehttp "GET /login HTTP/1.1" 200 18309
+INFO 2026-01-04 17:13:47,659 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:13:47,713 basehttp "GET /login HTTP/1.1" 200 18309
+INFO 2026-01-04 17:14:50,890 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:14:50,955 basehttp "GET /login HTTP/1.1" 200 18309
+INFO 2026-01-04 17:15:05,218 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2026-01-04 17:15:05,411 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-01-04 17:15:05,794 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 17551
+INFO 2026-01-04 17:15:05,861 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-01-04 17:15:05,873 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-01-04 17:15:05,874 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2026-01-04 17:15:05,874 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2026-01-04 17:15:05,890 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2026-01-04 17:15:05,924 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-01-04 17:15:05,994 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-01-04 17:15:17,005 basehttp "GET /admin_home HTTP/1.1" 301 0
+INFO 2026-01-04 17:15:17,120 basehttp "GET /admin_home/ HTTP/1.1" 200 31106
+WARNING 2026-01-04 17:15:17,192 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:16:03,275 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-04 17:16:03,324 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-04 17:16:16,685 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-04 17:17:05,617 basehttp "GET /manage_staff/ HTTP/1.1" 200 15260
+WARNING 2026-01-04 17:17:05,665 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:17:51,326 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:17:51,351 basehttp "GET /login HTTP/1.1" 200 18311
+INFO 2026-01-04 17:18:00,973 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:18:01,005 basehttp "GET /login HTTP/1.1" 200 18311
+INFO 2026-01-04 17:18:51,217 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-04 17:19:25,662 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:19:25,702 basehttp "GET /login HTTP/1.1" 200 18311
+INFO 2026-01-04 17:19:34,801 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:19:34,838 basehttp "GET /login HTTP/1.1" 200 18311
+INFO 2026-01-04 17:19:48,524 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2026-01-04 17:19:48,574 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-01-04 17:19:48,676 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 18031
+INFO 2026-01-04 17:20:10,697 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 18209
+INFO 2026-01-04 17:32:33,238 autoreload Watching for file changes with StatReloader
+INFO 2026-01-04 17:34:24,313 autoreload Watching for file changes with StatReloader
+INFO 2026-01-04 17:34:36,741 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-04 17:34:36,769 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-04 17:34:36,876 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 30101
+INFO 2026-01-04 17:34:36,918 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2026-01-04 17:34:36,948 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14879
+INFO 2026-01-04 17:34:37,066 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4700
+WARNING 2026-01-04 17:34:37,179 log Not Found: /favicon.ico
+WARNING 2026-01-04 17:34:37,181 basehttp "GET /favicon.ico HTTP/1.1" 404 39254
+WARNING 2026-01-04 17:34:37,235 log Not Found: /favicon.ico
+WARNING 2026-01-04 17:34:37,236 basehttp "GET /favicon.ico HTTP/1.1" 404 39254
+INFO 2026-01-04 17:34:39,503 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-04 17:34:58,710 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:34:58,806 basehttp "GET /admin_home/ HTTP/1.1" 200 31106
+WARNING 2026-01-04 17:34:58,862 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:34:58,869 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:34:58,874 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:34:58,981 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:34:58,985 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:35:04,980 basehttp "GET /add_staff/ HTTP/1.1" 200 24681
+WARNING 2026-01-04 17:35:05,026 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:06,628 basehttp "GET /manage_staff/ HTTP/1.1" 200 23265
+WARNING 2026-01-04 17:35:06,669 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:08,466 basehttp "GET /add_student/ HTTP/1.1" 200 24350
+WARNING 2026-01-04 17:35:08,506 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:09,819 basehttp "GET /manage_student/ HTTP/1.1" 200 22776
+WARNING 2026-01-04 17:35:09,859 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:11,477 basehttp "GET /add_course/ HTTP/1.1" 200 23340
+WARNING 2026-01-04 17:35:11,518 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:14,359 basehttp "GET /manage_course/ HTTP/1.1" 200 23237
+WARNING 2026-01-04 17:35:14,401 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:16,006 basehttp "GET /add_subject/ HTTP/1.1" 200 23259
+WARNING 2026-01-04 17:35:16,048 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:17,760 basehttp "GET /manage_subject/ HTTP/1.1" 200 22777
+WARNING 2026-01-04 17:35:17,803 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:20,095 basehttp "GET /add_session/ HTTP/1.1" 200 23586
+WARNING 2026-01-04 17:35:20,138 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:20,140 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:35:20,140 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:35:20,151 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:35:20,159 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:35:24,152 basehttp "GET /manage_session/ HTTP/1.1" 200 23262
+WARNING 2026-01-04 17:35:24,192 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:28,363 basehttp "GET /admin_view_attendance/ HTTP/1.1" 200 24754
+WARNING 2026-01-04 17:35:28,405 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:31,061 basehttp "GET /student_feedback_message/ HTTP/1.1" 200 23160
+WARNING 2026-01-04 17:35:31,093 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:34,402 basehttp "GET /admin_profile/ HTTP/1.1" 200 23506
+WARNING 2026-01-04 17:35:34,438 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:40,154 basehttp "GET /student_feedback_message/ HTTP/1.1" 200 23160
+WARNING 2026-01-04 17:35:40,199 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:41,345 basehttp "GET /admin_view_attendance/ HTTP/1.1" 200 24754
+WARNING 2026-01-04 17:35:41,383 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:35:43,233 basehttp "GET /admin_home/ HTTP/1.1" 200 31106
+WARNING 2026-01-04 17:35:43,271 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:36:00,152 basehttp "GET /manage_subject/ HTTP/1.1" 200 22777
+WARNING 2026-01-04 17:36:00,193 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:36:00,195 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:36:00,195 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:36:00,204 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:36:00,206 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:36:02,062 basehttp "GET /manage_course/ HTTP/1.1" 200 23237
+WARNING 2026-01-04 17:36:02,105 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:36:05,279 basehttp "GET /admin_home/ HTTP/1.1" 200 31106
+WARNING 2026-01-04 17:36:05,321 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:42:27,791 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-04 17:42:27,835 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14879
+INFO 2026-01-04 17:42:27,835 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 30101
+INFO 2026-01-04 17:42:27,998 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2026-01-04 17:42:28,002 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4700
+WARNING 2026-01-04 17:42:28,103 log Not Found: /favicon.ico
+WARNING 2026-01-04 17:42:28,104 basehttp "GET /favicon.ico HTTP/1.1" 404 39254
+INFO 2026-01-04 17:42:37,917 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-04 17:42:50,473 basehttp "GET /registration HTTP/1.1" 200 19750
+INFO 2026-01-04 17:44:08,544 basehttp "POST /doRegistration HTTP/1.1" 302 0
+INFO 2026-01-04 17:44:08,574 basehttp "GET /login HTTP/1.1" 200 18325
+INFO 2026-01-04 17:44:08,612 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:44:08,619 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:44:08,620 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:44:08,629 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:44:27,875 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:44:27,958 basehttp "GET /admin_home/ HTTP/1.1" 200 35646
+WARNING 2026-01-04 17:44:28,007 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:44:41,714 basehttp "GET /manage_session/ HTTP/1.1" 200 23252
+WARNING 2026-01-04 17:44:41,760 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:44:48,525 basehttp "GET /admin_home/ HTTP/1.1" 200 35646
+WARNING 2026-01-04 17:44:48,560 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:46:05,189 basehttp "GET /manage_course/ HTTP/1.1" 200 23227
+WARNING 2026-01-04 17:46:05,217 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:46:05,380 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:46:05,382 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:46:05,384 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:46:05,387 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:46:08,465 basehttp "GET /add_course/ HTTP/1.1" 200 23330
+WARNING 2026-01-04 17:46:08,491 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:46:10,238 basehttp "GET /manage_course/ HTTP/1.1" 200 23227
+WARNING 2026-01-04 17:46:10,269 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:46:13,388 basehttp "GET /add_subject/ HTTP/1.1" 200 23249
+WARNING 2026-01-04 17:46:13,412 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:46:14,693 basehttp "GET /manage_subject/ HTTP/1.1" 200 22767
+WARNING 2026-01-04 17:46:14,718 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:46:28,620 basehttp "GET /admin_home/ HTTP/1.1" 200 35646
+WARNING 2026-01-04 17:46:28,646 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:47:48,351 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-04 17:47:48,421 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:47:48,425 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:47:48,589 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:47:48,592 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:47:50,260 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-04 17:48:03,841 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:48:03,879 basehttp "GET /login HTTP/1.1" 200 18309
+INFO 2026-01-04 17:48:20,805 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:48:20,866 basehttp "GET /admin_home/ HTTP/1.1" 200 31360
+WARNING 2026-01-04 17:48:20,912 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:57:36,626 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py changed, reloading.
+INFO 2026-01-04 17:57:37,813 autoreload Watching for file changes with StatReloader
+INFO 2026-01-04 17:57:42,741 basehttp "GET /student_feedback_message/ HTTP/1.1" 200 23161
+WARNING 2026-01-04 17:57:42,792 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:57:42,796 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:57:42,796 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:57:42,853 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-04 17:57:42,854 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-01-04 17:57:58,187 basehttp "GET /staff_leave_view/ HTTP/1.1" 200 22685
+WARNING 2026-01-04 17:57:58,229 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:58:06,340 basehttp "GET /student_leave_view/ HTTP/1.1" 200 22697
+WARNING 2026-01-04 17:58:06,383 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-04 17:59:26,125 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-04 17:59:28,017 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-04 17:59:41,493 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:59:41,540 basehttp "GET /login HTTP/1.1" 200 18309
+INFO 2026-01-04 17:59:55,922 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-04 17:59:56,018 basehttp "GET /admin_home/ HTTP/1.1" 200 37529
+WARNING 2026-01-04 17:59:56,066 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
