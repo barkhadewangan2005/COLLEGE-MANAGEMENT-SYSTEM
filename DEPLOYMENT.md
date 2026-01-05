@@ -48,7 +48,10 @@ This command will identify potential security issues in your configuration.
 
 ## Production Settings
 
-The project includes a `settings_production.py` file with production-ready configurations.
+The project includes a `settings_production.py` file with production-ready configurations. 
+
+> [!IMPORTANT]
+> For production deployments, always use `requirements_production.txt` which contains only the necessary dependencies for a live environment.
 
 ### Key Production Settings
 
@@ -664,6 +667,6 @@ For deployment issues:
 
 ---
 
-**Version:** 1.0.0  
-**Last Updated:** November 11, 2025  
+**Version:** 2.0.0  
+**Last Updated:** January 5, 2026  
 **Django Version:** 5.2.8

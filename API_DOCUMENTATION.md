@@ -1,5 +1,8 @@
 # API Documentation
 
+**Version:** 2.0.0  
+**Last Updated:** January 5, 2026
+
 ## College Management System REST API
 
 ### Base URL

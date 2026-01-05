@@ -4,12 +4,10 @@ django>=5.2.8
 # Image Processing
 pillow
 
-# PDF Generation
-reportlab>=4.0.7
-
-# Excel Export/Import
-openpyxl>=3.1.2
-xlsxwriter>=3.1.9
+# Excel & PDF Generation (Optional)
+# reportlab>=4.0.7
+# openpyxl>=3.1.2
+# xlsxwriter>=3.1.9
 
 # REST API
 djangorestframework>=3.14.0
@@ -33,10 +31,11 @@ django-filter>=23.5
 # Development Tools
 django-debug-toolbar
 
-# Production Dependencies
+# Production Tools & Caching
 gunicorn>=21.2.0
 psycopg2-binary>=2.9.9
 python-decouple>=3.8
+python-dotenv>=1.0.0
 whitenoise>=6.6.0
 django-redis>=5.4.0
 redis>=5.0.1
@@ -47,3 +46,11 @@ django-ratelimit>=4.1.0
 
 # Utilities
 python-dateutil>=2.8.2
+
+# Optional Dependencies (Unused in current core logic but kept for future use)
+# celery>=5.3.4
+# django-celery-beat>=2.5.0
+# django-celery-results>=2.5.1
+# reportlab>=4.0.7
+# openpyxl>=3.1.2
+# xlsxwriter>=3.1.9

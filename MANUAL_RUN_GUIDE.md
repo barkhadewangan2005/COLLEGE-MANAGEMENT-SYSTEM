@@ -156,7 +156,7 @@ Watching for file changes with StatReloader
 Performing system checks...
 
 System check identified no issues (0 silenced).
-November 13, 2025 - 19:09:10
+January 5, 2026 - 12:00:00
 Django version 5.2.8, using settings 'student_management_project.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
@@ -181,9 +181,10 @@ You should see the College Management System home page.
 2. Fill in the form:
    - **First Name:** Your first name
    - **Last Name:** Your last name
-   - **Email:** `admin.hod@college.com` (important for admin role!)
+   - **Email:** Your email (Recommended format: `name.hod@college.com`)
    - **Password:** Your password
    - **Confirm Password:** Repeat the password
+   - **Register As:** Select **Admin/HOD**
 3. Click **Register**
 
 ### **Login to the System**

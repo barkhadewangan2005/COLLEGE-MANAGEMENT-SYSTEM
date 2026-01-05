@@ -1,5 +1,19 @@
 # College Management System - Release Notes
 
+## Version 2.0.0 - January 5, 2026
+
+### 🚀 System Hardening & Documentation Overhaul
+
+This major update focuses on system reliability, enhanced security, and comprehensive technical documentation.
+
+- **Hardened Security**: Implemented Custom RBAC decorators and `RoleBasedAccessMiddleware`.
+- **Automated Testing**: Unified `run_tests.py` script with dynamic user detection and 100% pass rate.
+- **Public Features**: Added public contact page and role-selectable registration dropdown.
+- **Docs Overhaul**: Synchronized 20+ markdown files to accurately reflect the v2 architecture.
+- **Dependency Sync**: Refined `requirements.txt` and `requirements_production.txt` for cleaner deployments.
+
+---
+
 ## Version 1.0.0 - November 12, 2025
 
 ### 🎉 Initial Release
@@ -419,8 +433,8 @@ For the latest updates, visit: https://github.com/barkhadewangan2005/COLLEGE-MAN
 
 ---
 
-**Release Date**: November 12, 2025  
-**Version**: 1.0.0  
+**Last Updated**: January 5, 2026  
+**Version**: 2.0.0  
 **Status**: Stable  
 **License**: MIT  
 **Platform**: Web (Django)

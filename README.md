@@ -1,4 +1,4 @@
-iis# 🎓 College Management System
+# 🎓 College Management System
 
 A comprehensive, modern college management system built with Django 5.2.8 that streamlines academic administration with interactive dashboards, real-time analytics, and role-based access control.
 
@@ -13,6 +13,7 @@ A comprehensive, modern college management system built with Django 5.2.8 that s
 - **Admin Dashboard**: 3 interactive charts (Student distribution, Subject analysis, Staff attendance)
 - **Staff Dashboard**: 2 charts (Attendance overview, Statistics breakdown)
 - **Student Dashboard**: Visual attendance tracking with color-coded percentage display
+- **Public Features**: Registration role selection and dedicated Contact Page
 
 ### 👥 Multi-User Role Management
 - **Admin/HOD**: Complete system control, user management, analytics
@@ -127,13 +128,15 @@ Open your browser and navigate to: `http://127.0.0.1:8000/`
 
 ## 👤 User Registration
 
-The system automatically determines user roles based on email format:
+Users can select their role (Student, Staff, or Admin/HOD) using the "Register As" dropdown on the registration page.
 
-- **Students**: `name.student@domain.com` (e.g., `john.student@college.com`)
-- **Staff**: `name.staff@domain.com` (e.g., `jane.staff@college.com`)
-- **Admin/HOD**: `name.hod@domain.com` (e.g., `admin.hod@college.com`)
+> [!NOTE]
+> While the dropdown is the primary method, the following email format convention is recommended for clarity:
+> - **Students**: `name.student@domain.com`
+> - **Staff**: `name.staff@domain.com`
+> - **Admin/HOD**: `name.hod@domain.com`
 
-New users can self-register through the registration page, or admins can create accounts directly.
+New users can self-register or be managed directly by existing administrators.
 
 ## 💻 Technology Stack
 
@@ -160,6 +163,7 @@ New users can self-register through the registration page, or admins can create 
 COLLEGE-MANAGEMENT-SYSTEM/
 ├── manage.py
 ├── requirements.txt
+├── requirements_production.txt
 ├── README.md
 ├── SETUP_GUIDE.md
 ├── USER_GUIDE.md
@@ -332,6 +336,13 @@ For support and queries:
 - Contact: barkhadewangan2005@github.com
 
 ## 🔄 Version History
+
+- **v2.0.0** (January 2026)
+  - Documentation synchronization and overhaul
+  - Hardened security with RBAC decorators and middleware
+  - Automated testing framework with 100% pass rate
+  - Public Registration with role selection and Contact Page
+  - Production-ready requirements synchronization
 
 - **v1.0.0** (November 2025)
   - Initial release

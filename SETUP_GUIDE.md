@@ -62,11 +62,11 @@ http://127.0.0.1:8000/
 ### **Registration Format:**
 The system automatically detects user roles based on email format:
 
-| User Type | Email Format Example | Role Assigned |
-|-----------|---------------------|---------------|
-| **Student** | `john.student@college.com` | Student Dashboard |
-| **Staff** | `rahul.staff@institute.edu` | Staff Dashboard |
-| **Admin/HOD** | `principal.hod@university.org` | Admin Dashboard |
+| User Type | Email Format Example (Recommended) | Registration Selection |
+|-----------|-----------------------------------|------------------------|
+| **Student** | `john.student@college.com` | Select "Student" |
+| **Staff** | `rahul.staff@institute.edu` | Select "Staff" |
+| **Admin/HOD** | `principal.hod@university.org` | Select "Admin/HOD" |
 
 ### **Steps to Register:**
 1. Go to: `http://127.0.0.1:8000/registration`
@@ -76,7 +76,7 @@ The system automatically detects user roles based on email format:
    - Email (use format above for role)
    - Password
    - Confirm Password
-3. Click **Register**
+3. Click **Register** (Ensure you've selected the correct **User Type** from the dropdown)
 4. Login at: `http://127.0.0.1:8000/login`
 
 ---
@@ -154,6 +154,18 @@ python manage.py create_initial_data
 ```
 Creates default course and session year if they don't exist.
 
+### **Create Quick Admin:**
+```powershell
+python manage.py create_admin
+```
+Quickly sets up a default HOD account (Email: admin@gmail.com, Password: 123).
+
+### **Populate Sample Data:**
+```powershell
+python manage.py create_sample_data
+```
+Populates the database with multiple courses, subjects, staff members, and students for testing.
+
 ### **Create Superuser:**
 ```powershell
 python manage.py createsuperuser
@@ -197,13 +209,18 @@ COLLEGE-MANAGEMENT-SYSTEM/
 │   │   ├── hod_template/        # 20+ admin templates
 │   │   ├── staff_template/      # 7+ staff templates
 │   │   └── student_template/    # 6+ student templates
+│   ├── api_urls.py               # API routing
+│   ├── api_views.py              # REST API views
+│   ├── serializers.py            # API data serializers
 │   ├── static/                   # CSS, JS, Images (✅ FIXED)
 │   └── management/commands/      # Custom commands (✅ FIXED)
 ├── static/                       # Collected static files
 ├── media/                        # User uploaded files
+├── logs/                         # Application logs (✅ CREATED)
 ├── db.sqlite3                   # Database (✅ CREATED)
 ├── manage.py                    # Django management script
-└── requirements.txt             # Dependencies (✅ FIXED)
+├── requirements.txt             # Development dependencies (✅ FIXED)
+└── requirements_production.txt  # Production dependencies
 ```
 
 ---
@@ -227,6 +244,7 @@ COLLEGE-MANAGEMENT-SYSTEM/
 8. Configure HTTPS/SSL
 9. Set up proper logging
 10. Use production-grade server (Gunicorn, uWSGI)
+11. Configure WhiteNoise for efficient static file serving
 
 ---
 
@@ -235,7 +253,25 @@ COLLEGE-MANAGEMENT-SYSTEM/
 ```
 django==5.2.8          # Web framework
 pillow==12.0.0         # Image processing
+djangorestframework    # REST API support
+django-crispy-forms    # Beautiful forms
+celery & redis         # Background tasks
 django-debug-toolbar   # Debugging tools
+whitenoise             # Static file management
+```
+
+---
+
+## 🔑 **Environment Variables**
+
+Create a `.env` file in the root directory for sensitive configurations:
+
+```env
+SECRET_KEY=your-secure-secret-key
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1,localhost,testserver
+EMAIL_HOST_USER=your-email@gmail.com
+EMAIL_HOST_PASSWORD=your-app-password
 ```
 
 ---

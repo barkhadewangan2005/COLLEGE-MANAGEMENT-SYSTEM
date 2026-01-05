@@ -1,11 +1,14 @@
 # Production Requirements for College Management System
 # Install with: pip install -r requirements_production.txt
 
-# Core Django
+# Core Django & Extensions
 Django==5.2.8
 Pillow>=10.0.0
+djangorestframework==3.14.0
+django-filter==23.5
+django-cors-headers==4.3.1
 
-# Production Server
+# Production Server & Static Files
 gunicorn==21.2.0
 whitenoise==6.6.0
 
@@ -16,25 +19,11 @@ psycopg2-binary==2.9.9  # PostgreSQL adapter
 python-decouple==3.8  # Alternative to python-dotenv
 python-dotenv==1.0.0
 
-# Database URL parsing (for Heroku)
-dj-database-url==2.1.0
+# Utilities
+python-dateutil==2.8.2
 
-# Security
-django-environ==0.11.2
-
-# Optional: AWS S3 for media storage
-# boto3==1.29.0
-# django-storages==1.14.0
-
-# Optional: Redis cache
-# redis==5.0.0
-# django-redis==5.4.0
-
-# Optional: Email
-# django-ses==3.5.0
-
-# Optional: Monitoring
-# sentry-sdk==1.39.0
-
-# Optional: Performance
-# django-debug-toolbar==4.2.0  # Only for development
+# Optional Dependencies (Present in requirements.txt but unused in current core logic)
+# celery==5.3.4
+# reportlab==4.0.7
+# openpyxl==3.1.2
+# django-ratelimit==4.1.0

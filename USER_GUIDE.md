@@ -4,6 +4,9 @@ Welcome to the College Management System! This comprehensive guide will help you
 
 ## Table of Contents
 - [Getting Started](#getting-started)
+  - [Accessing the System](#accessing-the-system)
+  - [Public Registration](#public-registration)
+  - [Contact Page](#contact-page)
 - [User Roles](#user-roles)
 - [Admin/HOD Features](#adminhod-features)
 - [Staff Features](#staff-features)
@@ -30,10 +33,28 @@ Welcome to the College Management System! This comprehensive guide will help you
 ### Dashboard Overview
 
 After logging in, you'll see your role-specific dashboard with:
-- **Statistics Cards**: Quick overview of key metrics
-- **Interactive Charts**: Visual representation of data
-- **Quick Actions**: Common tasks for your role
-- **Navigation Menu**: Access to all features
+- **Statistics Cards**: Quick overview of key metrics (Students, Staff, Courses, etc.)
+- **Interactive Charts**: Real-time visual representation of data
+- **Quick Actions**: Common tasks for your role (Add Student, Take Attendance, etc.)
+- **Navigation Menu**: Side-bar access to all features
+
+### Public Registration
+
+If you don't have an account yet, you can register yourself:
+1. Navigate to: `http://127.0.0.1:8000/registration`
+2. Fill in the form:
+   - **Full Name**: First and Last name
+   - **Email Address**: Your primary contact email
+   - **Password**: Secure password and confirmation
+   - **Register As**: Choose between **Admin/HOD**, **Staff**, or **Student**
+3. Click **Register**
+4. Upon success, you can log in with your email and password.
+
+### Contact Page
+
+For pre-login inquiries or technical support:
+1. Navigate to: `http://127.0.0.1:8000/contact`
+2. View contact information and institutional details.
 
 ---
 
@@ -85,21 +106,30 @@ The Admin dashboard provides comprehensive oversight with:
    - Number of subjects in each course
    - Helps in curriculum planning
 
-3. **Staff Attendance** (Grouped Bar Chart)
-   - Present vs Leave status
-   - Identifies attendance patterns
+3. **Staff Attendance** (Stacked Bar Chart)
+   - Classes attended vs Leaves taken per staff member
+   - Identifies high leave usage or consistent attendance
+
+4. **Student Attendance** (Grouped Bar Chart)
+   - Classes attended vs Classes missed/leave per student
+   - Identifies students requiring academic intervention
+
+5. **Leave & Feedback Status** (Pie & Doughnut Charts)
+   - Breakdown of Approved/Pending/Rejected leaves for both Students and Staff
+   - Responsiveness overview for Student and Staff feedback (Replied vs Unreplied)
 
 ### 1. Student Management
 
 #### Add New Student
 1. Navigate to **Manage Students** → **Add Student**
 2. Fill in the form:
-   - **Email**: Must follow format `name.student@domain.com`
+   - **Email**: Must be unique (checked in real-time)
+   - **Username**: Auto-generated from email (checked for uniqueness)
    - **Password**: Set initial password for the student
    - **First Name & Last Name**: Student's full name
    - **Address**: Physical address
    - **Course**: Select from available courses
-   - **Session Year**: Academic year
+   - **Session Year**: Academic year (Select from managed sessions)
    - **Gender**: Male/Female/Other
    - **Profile Picture** (Optional): Upload student photo
 3. Click **Save**
@@ -125,7 +155,7 @@ The Admin dashboard provides comprehensive oversight with:
 #### Add New Staff
 1. Navigate to **Manage Staff** → **Add Staff**
 2. Fill in the form:
-   - **Email**: Must follow format `name.staff@domain.com`
+   - **Email**: Must be unique (checked in real-time via AJAX)
    - **Password**: Set initial password
    - **First Name & Last Name**: Staff member's name
    - **Address**: Physical address
@@ -250,10 +280,19 @@ The Staff dashboard shows:
    - Quick visual status
 
 2. **Staff Statistics** (Bar Chart)
-   - Students, subjects, attendance, leaves
-   - Comprehensive overview
+   - Visual summary of your assigned Students, Subjects, Attendance records, and Leaves.
 
-### 1. Mark Attendance
+### 1. View Assigned Data
+
+#### View Your Subjects
+1. Navigate to **Subjects** → **View Subjects**
+2. See a list of all subjects specifically assigned to you by the Admin.
+
+#### View Your Students
+1. Navigate to **Students** → **View Students**
+2. See a list of all students enrolled in the courses/subjects you teach.
+
+### 2. Mark Attendance
 
 #### Taking Attendance
 1. Navigate to **Attendance** → **Take Attendance**
@@ -276,7 +315,7 @@ The Staff dashboard shows:
 - Filter by date and subject
 - Review attendance patterns
 
-### 2. Student Results
+### 3. Student Results
 
 #### Add Results
 1. Navigate to **Results** → **Add Result**
@@ -293,7 +332,11 @@ The Staff dashboard shows:
 3. Modify marks
 4. Click **Update**
 
-### 3. Leave Application
+#### View Results History
+1. Navigate to **Results** → **View Result**
+2. See all results previously submitted for your subjects.
+
+### 4. Leave Application
 
 #### Apply for Leave
 1. Navigate to **Leave** → **Apply Leave**
@@ -308,7 +351,7 @@ The Staff dashboard shows:
 - Check status: Pending, Approved, Rejected
 - View leave history
 
-### 4. Feedback
+### 5. Feedback
 
 #### Send Feedback to Admin
 1. Navigate to **Feedback** → **Send Feedback**
@@ -316,7 +359,7 @@ The Staff dashboard shows:
 3. Click **Submit**
 4. Admin will review your feedback
 
-### 5. Profile Management
+### 6. Profile Management
 
 #### Update Your Profile
 1. Click your name → **Profile**
@@ -351,12 +394,16 @@ The Student dashboard displays:
      - **Yellow** (60-74%): Good, improve
      - **Red** (<60%): Below requirement
    - Animated progress bar
-   - Warning message if below 75%
+   - **Warning**: Displays a real-time warning message if your attendance is below 75%.
+
+#### Quick Navigation
+- **View My Attendance**: Direct link to your attendance logs.
+- **View My Results**: Check your latest grades.
+- **Apply for Leave**: Submit a leave request.
+- **Send Feedback**: Message the administration.
 
 #### Academic Summary
-- Total subjects enrolled
-- Classes attended and missed
-- Quick action links
+- Displays quick counts for Total Subjects, Classes Attended, and Classes Missed.
 
 ### 1. View Attendance
 
@@ -373,7 +420,13 @@ The Student dashboard displays:
 - Identify subjects needing more attention
 - Track monthly attendance patterns
 
-### 2. View Results
+### 2. My Subjects
+
+#### View Enrolled Subjects
+1. Navigate to **Subjects** → **View Subjects**
+2. See all subjects currently enrolled in for your course.
+
+### 3. View Results
 
 #### Check Your Grades
 1. Navigate to **Results** → **View Results**
@@ -388,7 +441,7 @@ The Student dashboard displays:
 - Calculate CGPA (if feature enabled)
 - Compare performance across subjects
 
-### 3. Apply for Leave
+### 4. Apply for Leave
 
 #### Submit Leave Application
 1. Navigate to **Leave** → **Apply Leave**
@@ -404,7 +457,7 @@ The Student dashboard displays:
 - See approved/rejected leaves
 - Check leave history
 
-### 4. Send Feedback
+### 5. Send Feedback
 
 #### Provide Feedback
 1. Navigate to **Feedback** → **Send Feedback**
@@ -414,7 +467,7 @@ The Student dashboard displays:
    - Suggestions for improvement
 3. Click **Submit**
 
-### 5. Profile Management
+### 6. Profile Management
 
 #### Update Profile
 1. Click your name → **Profile**
@@ -462,8 +515,8 @@ To change your password:
 
 - Check for messages/alerts at the top
 - Success messages (green): Operation successful
-- Error messages (red): Action failed, try again
-- Warning messages (yellow): Important notices
+- Error messages (red): Action failed or details missing
+- Warning messages (yellow): Important notices (e.g., low attendance)
 
 ---
 
@@ -579,10 +632,10 @@ For additional help:
 
 ## System Information
 
-- **Version**: 1.0.0
+- **Version**: 2.0.0
 - **Django Version**: 5.2.8
 - **Python Version**: 3.8+
-- **Last Updated**: November 11, 2025
+- **Last Updated**: January 5, 2026
 
 ---
 

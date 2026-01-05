@@ -160,5 +160,5 @@ When registering, choose:
 ---
 
 **Status:** ✅ FULLY FUNCTIONAL  
-**Last Updated:** December 31, 2025  
-**Version:** 2.0
+**Last Updated:** January 5, 2026  
+**Version:** 2.0.0

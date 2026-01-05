@@ -41,8 +41,9 @@ This checklist ensures your deployment follows Django security best practices.
 ### Session Security
 - [ ] `SESSION_COOKIE_HTTPONLY = True`
 - [ ] `SESSION_COOKIE_SAMESITE = 'Strict'`
-- [ ] Reasonable session timeout configured
+- [ ] Reasonable session timeout configured (`SESSION_COOKIE_AGE = 3600`)
 - [ ] `SESSION_EXPIRE_AT_BROWSER_CLOSE = True` (recommended)
+- [ ] `LoginRedirectMiddleware` prevents authenticated users from accessing login/registration pages
 
 ### File Upload Security
 - [ ] File upload size limits configured
@@ -73,16 +74,21 @@ This checklist ensures your deployment follows Django security best practices.
 - [ ] Email verification for new accounts (optional)
 
 ### Authorization
-- [ ] Role-based access control implemented
-- [ ] Staff can only access their assigned data
-- [ ] Students can only view their own records
-- [ ] Admin permissions properly restricted
+- [ ] Role-based access control (RBAC) enforced via `RoleBasedAccessMiddleware`
+- [ ] Views protected with role-specific decorators:
+  - `@admin_required`: Restricts access to HOD tasks
+  - `@staff_required`: Restricts access to Staff tasks
+  - `@student_required`: Restricts access to Student tasks
+- [ ] Staff can only access their assigned data (verified in `StaffViews.py`)
+- [ ] Students can only view their own records (verified in `StudentViews.py`)
+- [ ] Admin permissions properly restricted to manage system-wide data
 
-### API Security (if applicable)
-- [ ] Rate limiting implemented
-- [ ] Authentication required for all endpoints
-- [ ] Input validation on all API requests
-- [ ] CORS configured properly
+### API Security
+- [ ] Rate limiting implemented via `django-ratelimit`
+- [ ] `TokenAuthentication` required for all API endpoints in `REST_FRAMEWORK` settings
+- [ ] Input validation enforced using DRF Serializers
+- [ ] CORS configured properly in `settings.py` (restricted to specific origins)
+- [ ] **AJAX Security**: Sensitive endpoints protected with `@ajax_required` decorator
 
 ---
 
@@ -278,8 +284,8 @@ Document your emergency contacts:
 
 ---
 
-**Last Updated:** November 11, 2025  
-**Version:** 1.0.0  
+**Last Updated:** January 5, 2026  
+**Version:** 2.0.0  
 **Django Version:** 5.2.8
 
 **Remember: Security is an ongoing process, not a one-time task!**
