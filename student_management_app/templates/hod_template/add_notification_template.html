@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Add Notification
+{% endblock page_title %}
+
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Add Notification</h3>
+                </div>
+
+                <form role="form" method="post" action="{% url 'add_notification_save' %}">
+                    {% csrf_token %}
+                    <div class="card-body">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <div class="form-group">
+                            <label>User</label>
+                            <select class="form-control" name="user" required>
+                                {% for user in users %}
+                                <option value="{{ user.id }}">{{ user.first_name }} {{ user.last_name }} ({{ user.username }})</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" name="title" placeholder="Notification Title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea class="form-control" name="message" rows="4" placeholder="Notification Message" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Notification Type</label>
+                            <select class="form-control" name="notification_type" required>
+                                <option value="info">Information</option>
+                                <option value="warning">Warning</option>
+                                <option value="alert">Alert</option>
+                                <option value="reminder">Reminder</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Urgency</label>
+                            <select class="form-control" name="urgency" required>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" name="category" required>
+                                <option value="academic">Academic</option>
+                                <option value="administrative">Administrative</option>
+                                <option value="event">Event</option>
+                                <option value="general">General</option>
+                                <option value="important">Important</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Scheduled Date (Optional)</label>
+                            <input type="datetime-local" class="form-control" name="scheduled_date">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Expiry Date (Optional)</label>
+                            <input type="datetime-local" class="form-control" name="expiry_date">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Link (Optional)</label>
+                            <input type="url" class="form-control" name="link" placeholder="https://example.com">
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Add Notification</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

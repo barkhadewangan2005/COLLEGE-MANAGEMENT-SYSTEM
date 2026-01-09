@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.core.files.storage import FileSystemStorage
 from django.urls import reverse
 import datetime
-from .models import CustomUser, Staffs, Courses, Subjects, Students, Attendance, AttendanceReport, LeaveReportStudent, FeedBackStudent, StudentResult
+from .models import CustomUser, Staffs, Courses, Subjects, Students, Attendance, AttendanceReport, LeaveReportStudent, FeedBackStudent, StudentResult, Announcement, Notification
 
 def student_home(request):
     student_obj = Students.objects.get(admin=request.user.id)
@@ -230,8 +230,37 @@ def student_view_subjects(request):
     student = Students.objects.get(admin=request.user.id)
     course = student.course_id
     subjects = Subjects.objects.filter(course_id=course)
-    
+
     context = {
         "subjects": subjects
     }
     return render(request, "student_template/student_view_subjects.html", context)
+
+
+def student_view_announcements(request):
+    # Get announcements targeted to students or all users
+    announcements = Announcement.objects.filter(
+        is_active=True,
+        target_audience__in=['all', 'students']
+    ).order_by('-created_at')
+
+    context = {
+        "announcements": announcements
+    }
+    return render(request, "student_template/student_view_announcements.html", context)
+
+
+def student_view_notifications(request):
+    # Get notifications for the current student user
+    notifications = Notification.objects.filter(
+        user=request.user
+    ).order_by('-created_at')
+
+    # Mark notifications as read when viewed
+    unread_notifications = notifications.filter(is_read=False)
+    unread_notifications.update(is_read=True)
+
+    context = {
+        "notifications": notifications
+    }
+    return render(request, "student_template/student_view_notifications.html", context)

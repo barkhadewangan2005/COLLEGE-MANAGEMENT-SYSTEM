@@ -1,0 +1,1475 @@
+INFO 2026-01-06 14:39:03,452 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 14:41:50,275 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 14:41:50,376 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-06 14:41:50,386 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-06 14:41:50,575 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-06 14:41:50,578 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2026-01-06 14:41:50,666 log Not Found: /favicon.ico
+WARNING 2026-01-06 14:41:50,667 basehttp "GET /favicon.ico HTTP/1.1" 404 40378
+INFO 2026-01-06 14:41:52,214 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 14:42:03,473 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 14:42:03,721 basehttp "GET /admin_home/ HTTP/1.1" 200 37917
+WARNING 2026-01-06 14:42:03,791 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 14:58:38,450 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-06 14:58:38,834 log Not Found: /favicon.ico
+WARNING 2026-01-06 14:58:38,836 basehttp "GET /favicon.ico HTTP/1.1" 404 40378
+INFO 2026-01-06 14:58:40,465 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 14:59:07,948 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 14:59:08,195 basehttp "GET /admin_home/ HTTP/1.1" 200 37917
+WARNING 2026-01-06 14:59:08,261 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 15:00:19,391 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 15:09:09,935 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 15:09:11,538 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 15:09:22,338 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 15:09:22,383 basehttp "GET /login HTTP/1.1" 200 18309
+INFO 2026-01-06 15:09:43,339 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 15:09:43,377 basehttp "GET /login HTTP/1.1" 200 18309
+INFO 2026-01-06 15:10:04,695 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 15:10:04,835 basehttp "GET /admin_home/ HTTP/1.1" 200 37917
+WARNING 2026-01-06 15:10:04,943 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 15:18:56,633 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 15:18:58,480 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 15:19:11,492 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 15:19:11,627 basehttp "GET /admin_home/ HTTP/1.1" 200 37917
+WARNING 2026-01-06 15:19:11,665 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 15:19:21,343 basehttp "GET /staff_feedback_message/ HTTP/1.1" 200 23415
+WARNING 2026-01-06 15:19:21,388 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 15:19:23,422 basehttp "GET /admin_view_attendance/ HTTP/1.1" 200 26586
+WARNING 2026-01-06 15:19:23,463 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 16:28:29,360 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\models.py changed, reloading.
+INFO 2026-01-06 16:28:29,352 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\models.py changed, reloading.
+INFO 2026-01-06 16:28:32,639 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:28:49,479 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py changed, reloading.
+INFO 2026-01-06 16:28:49,486 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py changed, reloading.
+INFO 2026-01-06 16:28:50,634 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:29:09,908 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 16:29:09,955 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 16:29:11,231 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:29:11,256 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:33:44,484 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:33:50,122 basehttp "GET / HTTP/1.1" 200 18838
+INFO 2026-01-06 16:33:52,037 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 16:34:08,360 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 16:34:08,783 basehttp "GET /admin_home/ HTTP/1.1" 200 37917
+WARNING 2026-01-06 16:34:08,828 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 16:34:11,338 basehttp "GET /add_subject/ HTTP/1.1" 200 23608
+WARNING 2026-01-06 16:34:11,385 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 16:34:19,357 basehttp "GET /admin_home/ HTTP/1.1" 200 37917
+WARNING 2026-01-06 16:34:19,409 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 16:34:45,712 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 16:34:45,735 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 16:34:47,398 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 16:35:06,415 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 16:35:06,544 basehttp "GET /staff_home/ HTTP/1.1" 200 27451
+WARNING 2026-01-06 16:35:06,587 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 16:46:19,959 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-06 16:46:19,991 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-06 16:46:21,771 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:46:32,519 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 16:46:32,542 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 16:46:33,780 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:46:33,794 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:46:41,175 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py changed, reloading.
+INFO 2026-01-06 16:46:41,176 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py changed, reloading.
+INFO 2026-01-06 16:46:42,598 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:46:42,603 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:47:01,050 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 16:47:01,051 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 16:47:02,129 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:47:02,130 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:47:52,662 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 16:47:52,671 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 16:47:53,616 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:53:00,387 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py changed, reloading.
+INFO 2026-01-06 16:53:00,735 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py changed, reloading.
+INFO 2026-01-06 16:53:02,046 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:53:02,142 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:56:16,299 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:57:46,831 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 16:57:50,883 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 16:57:52,684 basehttp "GET /login HTTP/1.1" 200 17965
+INFO 2026-01-06 16:58:05,395 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 16:58:05,587 basehttp "GET /admin_home/ HTTP/1.1" 200 38303
+WARNING 2026-01-06 16:58:05,632 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 16:58:09,509 basehttp "GET /admin_announcements/ HTTP/1.1" 200 31158
+WARNING 2026-01-06 16:58:09,547 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 16:58:10,124 log Internal Server Error: /api/announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 204, in get_is_read
+    read_status = AnnouncementReadStatus.objects.get(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\fields.py", line 1870, in to_representation
+    return method(value)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 209, in get_is_read
+    except AnnouncementReadStatus.DoesNotExist:
+           ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+ERROR 2026-01-06 16:58:10,224 basehttp "GET /api/announcements/ HTTP/1.1" 500 155339
+INFO 2026-01-06 16:58:35,594 basehttp "GET /admin_notifications/ HTTP/1.1" 200 27667
+WARNING 2026-01-06 16:58:35,642 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 16:58:35,703 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 2
+INFO 2026-01-06 16:58:53,242 basehttp "GET /admin_notifications/ HTTP/1.1" 200 27667
+WARNING 2026-01-06 16:58:53,277 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 16:58:53,328 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 2
+INFO 2026-01-06 16:59:05,063 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 16:59:05,088 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 16:59:06,675 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 16:59:25,276 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 16:59:25,351 basehttp "GET /staff_home/ HTTP/1.1" 200 27657
+WARNING 2026-01-06 16:59:25,387 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 16:59:31,521 basehttp "GET /staff_announcements/ HTTP/1.1" 200 28533
+WARNING 2026-01-06 16:59:31,553 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 16:59:31,622 log Internal Server Error: /api/announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 204, in get_is_read
+    read_status = AnnouncementReadStatus.objects.get(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\fields.py", line 1870, in to_representation
+    return method(value)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 209, in get_is_read
+    except AnnouncementReadStatus.DoesNotExist:
+           ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+INFO 2026-01-06 16:59:31,679 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 234
+ERROR 2026-01-06 16:59:31,690 basehttp "GET /api/announcements/ HTTP/1.1" 500 155342
+INFO 2026-01-06 16:59:59,716 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 16:59:59,739 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 17:00:01,449 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 17:00:15,711 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 17:00:15,767 basehttp "GET /student_home/ HTTP/1.1" 200 26820
+WARNING 2026-01-06 17:00:15,803 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 17:00:35,671 basehttp "GET /admin_home/ HTTP/1.1" 200 36099
+INFO 2026-01-06 18:15:46,754 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 18:15:52,115 basehttp "GET / HTTP/1.1" 200 18838
+WARNING 2026-01-06 18:15:52,594 log Not Found: /favicon.ico
+WARNING 2026-01-06 18:15:52,595 basehttp "GET /favicon.ico HTTP/1.1" 404 41506
+INFO 2026-01-06 18:15:53,907 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 18:16:08,096 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 18:16:08,352 basehttp "GET /admin_home/ HTTP/1.1" 200 38793
+WARNING 2026-01-06 18:16:08,402 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 18:16:12,949 basehttp "GET /admin_announcements/ HTTP/1.1" 200 31158
+WARNING 2026-01-06 18:16:12,999 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 18:16:13,143 log Internal Server Error: /api/announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 204, in get_is_read
+    read_status = AnnouncementReadStatus.objects.get(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\fields.py", line 1870, in to_representation
+    return method(value)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 209, in get_is_read
+    except AnnouncementReadStatus.DoesNotExist:
+           ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+ERROR 2026-01-06 18:16:13,261 basehttp "GET /api/announcements/ HTTP/1.1" 500 155339
+INFO 2026-01-06 18:16:18,974 basehttp "GET /admin_notifications/ HTTP/1.1" 200 27667
+WARNING 2026-01-06 18:16:19,016 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 18:16:19,074 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 2
+INFO 2026-01-06 18:16:54,106 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 18:16:54,145 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 18:16:55,935 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 18:17:09,639 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 18:17:09,736 basehttp "GET /student_home/ HTTP/1.1" 200 26820
+WARNING 2026-01-06 18:17:09,796 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 18:17:42,892 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 18:17:43,001 basehttp "GET /staff_home/ HTTP/1.1" 200 27658
+WARNING 2026-01-06 18:17:43,067 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 18:17:46,054 basehttp "GET /staff_announcements/ HTTP/1.1" 200 28533
+WARNING 2026-01-06 18:17:46,103 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 18:17:46,215 log Internal Server Error: /api/announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 204, in get_is_read
+    read_status = AnnouncementReadStatus.objects.get(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\fields.py", line 1870, in to_representation
+    return method(value)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 209, in get_is_read
+    except AnnouncementReadStatus.DoesNotExist:
+           ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+INFO 2026-01-06 18:17:46,291 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 234
+ERROR 2026-01-06 18:17:46,306 basehttp "GET /api/announcements/ HTTP/1.1" 500 155342
+INFO 2026-01-06 18:21:10,476 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 18:21:11,369 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 18:21:11,362 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 18:21:12,420 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 18:21:12,647 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 18:21:12,862 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 18:21:58,700 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 18:30:03,087 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 18:31:28,788 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 18:31:37,516 basehttp "GET / HTTP/1.1" 200 18838
+INFO 2026-01-06 18:31:39,714 basehttp "GET /login HTTP/1.1" 200 17965
+INFO 2026-01-06 18:31:55,320 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 18:31:55,681 basehttp "GET /admin_home/ HTTP/1.1" 200 38793
+WARNING 2026-01-06 18:31:55,754 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 18:32:24,841 basehttp "GET /admin_announcements/ HTTP/1.1" 200 31158
+WARNING 2026-01-06 18:32:24,914 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 18:32:25,146 log Internal Server Error: /api/announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 204, in get_is_read
+    read_status = AnnouncementReadStatus.objects.get(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\fields.py", line 1870, in to_representation
+    return method(value)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 209, in get_is_read
+    except AnnouncementReadStatus.DoesNotExist:
+           ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+ERROR 2026-01-06 18:32:25,226 basehttp "GET /api/announcements/ HTTP/1.1" 500 155339
+INFO 2026-01-06 18:33:18,452 basehttp "GET /admin_notifications/ HTTP/1.1" 200 27667
+WARNING 2026-01-06 18:33:18,541 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 18:33:18,645 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 2
+INFO 2026-01-06 18:33:28,138 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 18:33:28,189 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 18:33:29,836 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 18:33:50,127 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 18:33:50,163 basehttp "GET /login HTTP/1.1" 200 18311
+INFO 2026-01-06 18:34:05,921 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 18:34:06,032 basehttp "GET /staff_home/ HTTP/1.1" 200 27658
+WARNING 2026-01-06 18:34:06,100 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 18:34:09,215 basehttp "GET /staff_announcements/ HTTP/1.1" 200 28533
+WARNING 2026-01-06 18:34:09,279 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 18:34:09,369 log Internal Server Error: /api/announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 204, in get_is_read
+    read_status = AnnouncementReadStatus.objects.get(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\fields.py", line 1870, in to_representation
+    return method(value)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 209, in get_is_read
+    except AnnouncementReadStatus.DoesNotExist:
+           ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+INFO 2026-01-06 18:34:09,444 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 234
+ERROR 2026-01-06 18:34:09,458 basehttp "GET /api/announcements/ HTTP/1.1" 500 155342
+INFO 2026-01-06 18:34:25,232 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-06 18:34:25,609 log Not Found: /favicon.ico
+WARNING 2026-01-06 18:34:25,611 basehttp "GET /favicon.ico HTTP/1.1" 404 41506
+INFO 2026-01-06 18:34:27,300 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 18:34:39,544 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 18:34:39,651 basehttp "GET /student_home/ HTTP/1.1" 200 27029
+WARNING 2026-01-06 18:34:39,702 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 18:34:43,005 basehttp "GET /student_announcements/ HTTP/1.1" 200 27342
+WARNING 2026-01-06 18:34:43,067 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 18:34:43,193 log Internal Server Error: /api/announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 204, in get_is_read
+    read_status = AnnouncementReadStatus.objects.get(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\fields.py", line 1870, in to_representation
+    return method(value)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 209, in get_is_read
+    except AnnouncementReadStatus.DoesNotExist:
+           ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+INFO 2026-01-06 18:34:43,195 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 2
+ERROR 2026-01-06 18:34:43,268 basehttp "GET /api/announcements/ HTTP/1.1" 500 155346
+INFO 2026-01-06 20:43:43,251 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 20:46:46,572 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 20:46:47,793 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 20:49:28,085 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 20:49:28,135 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-06 20:49:28,144 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-06 20:49:28,434 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-06 20:49:28,434 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2026-01-06 20:49:28,534 log Not Found: /favicon.ico
+WARNING 2026-01-06 20:49:28,536 basehttp "GET /favicon.ico HTTP/1.1" 404 41506
+INFO 2026-01-06 20:49:32,422 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 20:49:46,999 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 20:49:47,297 basehttp "GET /admin_home/ HTTP/1.1" 200 38793
+WARNING 2026-01-06 20:49:47,371 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 20:50:22,840 basehttp "GET /admin_announcements/ HTTP/1.1" 200 31230
+WARNING 2026-01-06 20:50:22,906 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 20:50:23,102 log Internal Server Error: /api/announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 204, in get_is_read
+    read_status = AnnouncementReadStatus.objects.get(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\rest_framework\fields.py", line 1870, in to_representation
+    return method(value)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py", line 209, in get_is_read
+    except AnnouncementReadStatus.DoesNotExist:
+           ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'AnnouncementReadStatus' is not defined
+ERROR 2026-01-06 20:50:23,188 basehttp "GET /api/announcements/ HTTP/1.1" 500 155470
+INFO 2026-01-06 20:51:22,622 basehttp "GET /admin_notifications/ HTTP/1.1" 200 27747
+WARNING 2026-01-06 20:51:22,686 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 20:51:22,765 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 2
+INFO 2026-01-06 20:52:17,289 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py changed, reloading.
+INFO 2026-01-06 20:52:18,813 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 20:52:55,725 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 20:52:57,013 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 20:53:15,346 basehttp "GET /admin_announcements/ HTTP/1.1" 200 31231
+WARNING 2026-01-06 20:53:15,410 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 20:53:15,535 basehttp "GET /api/announcements/ HTTP/1.1" 200 959
+INFO 2026-01-06 20:54:33,679 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 20:54:35,101 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 20:56:04,264 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 20:56:06,685 basehttp "GET /login HTTP/1.1" 200 17965
+INFO 2026-01-06 20:56:24,426 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 20:56:24,787 basehttp "GET /admin_home/ HTTP/1.1" 200 38793
+WARNING 2026-01-06 20:56:24,847 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 20:56:42,154 basehttp "GET /admin_announcements/ HTTP/1.1" 200 31275
+WARNING 2026-01-06 20:56:42,215 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 20:56:42,401 basehttp "GET /api/announcements/ HTTP/1.1" 200 959
+INFO 2026-01-06 21:03:07,722 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py changed, reloading.
+INFO 2026-01-06 21:03:08,886 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:20:34,181 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 21:20:36,619 basehttp "GET /login HTTP/1.1" 200 17965
+INFO 2026-01-06 21:20:55,630 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 21:20:55,910 basehttp "GET /admin_home/ HTTP/1.1" 200 39028
+WARNING 2026-01-06 21:20:55,978 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:21:02,086 basehttp "GET /admin_announcements/ HTTP/1.1" 200 31519
+WARNING 2026-01-06 21:21:02,150 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:21:02,290 basehttp "GET /api/announcements/ HTTP/1.1" 200 959
+INFO 2026-01-06 21:31:52,522 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:32:54,068 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-06 21:32:54,484 log Not Found: /favicon.ico
+WARNING 2026-01-06 21:32:54,485 basehttp "GET /favicon.ico HTTP/1.1" 404 41506
+INFO 2026-01-06 21:32:56,450 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 21:33:08,838 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 21:33:09,067 basehttp "GET /admin_home/ HTTP/1.1" 200 39028
+WARNING 2026-01-06 21:33:09,125 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:33:15,006 basehttp "GET /admin_notifications/ HTTP/1.1" 200 27982
+WARNING 2026-01-06 21:33:15,063 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:33:15,142 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 2
+INFO 2026-01-06 21:33:17,567 basehttp "GET /admin_view_attendance/ HTTP/1.1" 200 27820
+WARNING 2026-01-06 21:33:17,613 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:33:22,000 basehttp "GET /admin_announcements/ HTTP/1.1" 200 31519
+WARNING 2026-01-06 21:33:22,070 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:33:22,173 basehttp "GET /api/announcements/ HTTP/1.1" 200 959
+INFO 2026-01-06 21:33:40,209 basehttp "POST /api/announcements/ HTTP/1.1" 201 208
+INFO 2026-01-06 21:33:40,289 basehttp "GET /api/announcements/ HTTP/1.1" 200 1168
+INFO 2026-01-06 21:33:42,779 basehttp "GET /__debug__/history_sidebar/?request_id=5a9d0c4ae8ab4a82ab1270d32f7653f4 HTTP/1.1" 200 10180
+INFO 2026-01-06 21:33:46,721 basehttp "GET /admin_notifications/ HTTP/1.1" 200 27982
+WARNING 2026-01-06 21:33:46,795 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:33:46,873 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 2
+INFO 2026-01-06 21:33:50,441 basehttp "GET /admin_announcements/ HTTP/1.1" 200 31519
+WARNING 2026-01-06 21:33:50,504 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:33:50,593 basehttp "GET /api/announcements/ HTTP/1.1" 200 1168
+INFO 2026-01-06 21:34:08,583 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 21:34:08,624 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 21:34:10,848 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 21:34:27,061 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 21:34:27,163 basehttp "GET /staff_home/ HTTP/1.1" 200 27892
+WARNING 2026-01-06 21:34:27,216 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:34:29,561 basehttp "GET /staff_announcements/ HTTP/1.1" 200 28768
+WARNING 2026-01-06 21:34:29,624 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:34:29,776 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 234
+INFO 2026-01-06 21:34:29,788 basehttp "GET /api/announcements/ HTTP/1.1" 200 870
+INFO 2026-01-06 21:35:28,361 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 21:35:28,390 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 21:35:30,231 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 21:35:46,399 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 21:35:46,493 basehttp "GET /student_home/ HTTP/1.1" 200 27264
+WARNING 2026-01-06 21:35:46,553 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:35:48,779 basehttp "GET /student_announcements/ HTTP/1.1" 200 27124
+WARNING 2026-01-06 21:35:48,836 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 21:35:48,942 basehttp "GET /api/notifications/my_notifications/ HTTP/1.1" 200 2
+INFO 2026-01-06 21:35:48,952 basehttp "GET /api/announcements/ HTTP/1.1" 200 887
+INFO 2026-01-06 21:36:23,010 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 21:36:23,523 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\api_views.py changed, reloading.
+INFO 2026-01-06 21:36:24,341 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:36:24,988 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:37:03,968 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py changed, reloading.
+INFO 2026-01-06 21:37:04,674 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py changed, reloading.
+INFO 2026-01-06 21:37:05,151 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:37:05,925 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:37:10,175 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\models.py changed, reloading.
+INFO 2026-01-06 21:37:10,715 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\models.py changed, reloading.
+INFO 2026-01-06 21:37:11,533 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:37:11,966 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:39:39,267 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py changed, reloading.
+INFO 2026-01-06 21:39:39,295 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\serializers.py changed, reloading.
+INFO 2026-01-06 21:39:40,450 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:39:40,451 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:39:44,319 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py changed, reloading.
+INFO 2026-01-06 21:39:44,333 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py changed, reloading.
+INFO 2026-01-06 21:39:45,431 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:39:45,515 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:39:48,357 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 21:39:48,417 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 21:39:49,344 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:39:49,396 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:39:54,249 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-06 21:39:54,313 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-06 21:39:55,424 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:39:55,436 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:52:01,384 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\models.py changed, reloading.
+INFO 2026-01-06 21:52:01,684 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\models.py changed, reloading.
+INFO 2026-01-06 21:52:02,933 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:52:03,060 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:52:12,694 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\models.py changed, reloading.
+INFO 2026-01-06 21:52:13,963 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:52:13,964 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:52:53,502 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py changed, reloading.
+INFO 2026-01-06 21:52:53,666 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py changed, reloading.
+INFO 2026-01-06 21:52:54,741 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:52:54,805 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:53:01,797 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py changed, reloading.
+INFO 2026-01-06 21:53:01,839 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py changed, reloading.
+INFO 2026-01-06 21:53:02,963 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 21:53:02,997 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:05:59,184 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-06 22:05:59,286 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-06 22:06:00,394 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:06:10,057 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py changed, reloading.
+INFO 2026-01-06 22:06:10,062 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py changed, reloading.
+INFO 2026-01-06 22:06:11,395 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:06:35,380 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 22:06:35,422 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 22:06:36,656 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:06:36,661 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:08:56,013 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 22:08:56,029 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 22:08:57,406 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:10:31,985 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:11:23,323 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-06 22:11:23,338 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-06 22:11:23,443 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py changed, reloading.
+INFO 2026-01-06 22:11:24,808 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:11:24,809 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:11:24,846 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:17:07,020 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py changed, reloading.
+INFO 2026-01-06 22:17:07,024 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py changed, reloading.
+INFO 2026-01-06 22:17:07,036 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py changed, reloading.
+INFO 2026-01-06 22:17:08,373 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:17:08,373 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 22:17:08,389 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 23:02:56,364 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 23:02:58,857 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 23:03:21,409 basehttp "POST /doLogin HTTP/1.1" 302 0
+ERROR 2026-01-06 23:03:21,942 log Internal Server Error: /admin_home/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py", line 98, in admin_home
+    return render(request, "hod_template/home_content.html", context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'manage_announcements' not found. 'manage_announcements' is not a valid view function or pattern name.
+ERROR 2026-01-06 23:03:22,103 basehttp "GET /admin_home/ HTTP/1.1" 500 320558
+INFO 2026-01-06 23:05:03,069 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 23:05:11,285 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-06 23:05:11,610 log Not Found: /favicon.ico
+WARNING 2026-01-06 23:05:11,613 basehttp "GET /favicon.ico HTTP/1.1" 404 41550
+INFO 2026-01-06 23:05:13,474 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 23:05:28,272 basehttp "POST /doLogin HTTP/1.1" 302 0
+ERROR 2026-01-06 23:05:28,627 log Internal Server Error: /admin_home/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\HodViews.py", line 98, in admin_home
+    return render(request, "hod_template/home_content.html", context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'manage_announcements' not found. 'manage_announcements' is not a valid view function or pattern name.
+ERROR 2026-01-06 23:05:28,761 basehttp "GET /admin_home/ HTTP/1.1" 500 320558
+INFO 2026-01-06 23:07:01,161 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 23:07:01,168 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 23:07:01,168 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 23:07:01,876 autoreload C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\urls.py changed, reloading.
+INFO 2026-01-06 23:07:02,827 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 23:07:02,891 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 23:07:02,972 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 23:07:03,310 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 23:07:41,400 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 23:07:43,792 basehttp "GET /login HTTP/1.1" 200 17965
+INFO 2026-01-06 23:07:58,572 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 23:07:58,853 basehttp "GET /admin_home/ HTTP/1.1" 200 38809
+WARNING 2026-01-06 23:07:58,928 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:08:05,778 basehttp "GET /manage_announcements/ HTTP/1.1" 200 28497
+WARNING 2026-01-06 23:08:05,849 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:08:22,985 basehttp "GET /manage_notifications/ HTTP/1.1" 200 28081
+WARNING 2026-01-06 23:08:23,062 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:08:38,517 basehttp "GET /add_notification/ HTTP/1.1" 200 29446
+WARNING 2026-01-06 23:08:38,583 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:09:00,410 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-06 23:09:00,800 log Not Found: /favicon.ico
+WARNING 2026-01-06 23:09:00,803 basehttp "GET /favicon.ico HTTP/1.1" 404 45022
+INFO 2026-01-06 23:09:02,187 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 23:09:57,439 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 23:09:57,539 basehttp "GET /staff_home/ HTTP/1.1" 200 27873
+WARNING 2026-01-06 23:09:57,596 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 23:10:02,586 log Internal Server Error: /staff_view_announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: staff_template/base_template.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py", line 428, in staff_view_announcements
+    return render(request, "staff_template/staff_view_announcements.html", context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: staff_template/base_template.html
+ERROR 2026-01-06 23:10:02,702 basehttp "GET /staff_view_announcements/ HTTP/1.1" 500 155686
+INFO 2026-01-06 23:10:42,008 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-06 23:10:42,322 log Not Found: /favicon.ico
+WARNING 2026-01-06 23:10:42,324 basehttp "GET /favicon.ico HTTP/1.1" 404 45022
+INFO 2026-01-06 23:10:44,001 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 23:11:03,195 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 23:11:03,293 basehttp "GET /staff_home/ HTTP/1.1" 200 27873
+WARNING 2026-01-06 23:11:03,352 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 23:11:06,170 log Internal Server Error: /staff_view_notifications/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: staff_template/base_template.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py", line 444, in staff_view_notifications
+    return render(request, "staff_template/staff_view_notifications.html", context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: staff_template/base_template.html
+ERROR 2026-01-06 23:11:06,254 basehttp "GET /staff_view_notifications/ HTTP/1.1" 500 153832
+INFO 2026-01-06 23:11:23,060 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 23:11:23,093 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 23:11:24,983 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 23:11:41,116 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 23:11:41,207 basehttp "GET /student_home/ HTTP/1.1" 200 27247
+WARNING 2026-01-06 23:11:41,257 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 23:11:44,125 log Internal Server Error: /student_view_announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: student_template/base_template.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StudentViews.py", line 250, in student_view_announcements
+    return render(request, "student_template/student_view_announcements.html", context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: student_template/base_template.html
+ERROR 2026-01-06 23:11:44,198 basehttp "GET /student_view_announcements/ HTTP/1.1" 500 155962
+INFO 2026-01-06 23:15:25,120 autoreload Watching for file changes with StatReloader
+INFO 2026-01-06 23:15:31,374 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-06 23:15:31,729 log Not Found: /favicon.ico
+WARNING 2026-01-06 23:15:31,731 basehttp "GET /favicon.ico HTTP/1.1" 404 45022
+INFO 2026-01-06 23:15:33,493 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 23:15:49,726 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 23:15:49,890 basehttp "GET /staff_home/ HTTP/1.1" 200 27875
+WARNING 2026-01-06 23:15:49,949 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 23:15:57,041 log Internal Server Error: /staff_view_announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: staff_template/base_template.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py", line 428, in staff_view_announcements
+    return render(request, "staff_template/staff_view_announcements.html", context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: staff_template/base_template.html
+ERROR 2026-01-06 23:15:57,111 basehttp "GET /staff_view_announcements/ HTTP/1.1" 500 155686
+INFO 2026-01-06 23:17:29,506 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-06 23:17:29,895 log Not Found: /favicon.ico
+WARNING 2026-01-06 23:17:29,897 basehttp "GET /favicon.ico HTTP/1.1" 404 45022
+INFO 2026-01-06 23:17:31,613 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 23:17:45,702 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 23:17:45,796 basehttp "GET /staff_home/ HTTP/1.1" 200 27873
+WARNING 2026-01-06 23:17:45,864 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+ERROR 2026-01-06 23:17:48,541 log Internal Server Error: /staff_view_announcements/
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\base.py", line 979, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: staff_template/base_template.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\student_management_app\StaffViews.py", line 428, in staff_view_announcements
+    return render(request, "staff_template/staff_view_announcements.html", context)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hriti\OneDrive\Desktop\python\COLLEGE-MANAGEMENT-SYSTEM\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: staff_template/base_template.html
+ERROR 2026-01-06 23:17:48,681 basehttp "GET /staff_view_announcements/ HTTP/1.1" 500 155686
+INFO 2026-01-06 23:24:56,326 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-06 23:24:56,653 log Not Found: /favicon.ico
+WARNING 2026-01-06 23:24:56,655 basehttp "GET /favicon.ico HTTP/1.1" 404 45022
+INFO 2026-01-06 23:24:58,471 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-06 23:25:10,805 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 23:25:10,902 basehttp "GET /staff_home/ HTTP/1.1" 200 27873
+WARNING 2026-01-06 23:25:10,958 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:25:13,252 basehttp "GET /staff_view_announcements/ HTTP/1.1" 200 26552
+WARNING 2026-01-06 23:25:13,308 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:25:22,366 basehttp "GET /staff_view_notifications/ HTTP/1.1" 200 23472
+WARNING 2026-01-06 23:25:22,429 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:25:32,987 basehttp "GET /staff_view_announcements/ HTTP/1.1" 200 26552
+WARNING 2026-01-06 23:25:33,044 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:25:54,148 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 23:25:54,184 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 23:25:55,918 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 23:26:08,906 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 23:26:08,998 basehttp "GET /student_home/ HTTP/1.1" 200 27247
+WARNING 2026-01-06 23:26:09,054 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:26:11,708 basehttp "GET /student_view_announcements/ HTTP/1.1" 200 26019
+WARNING 2026-01-06 23:26:11,757 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:26:15,503 basehttp "GET /student_view_notifications/ HTTP/1.1" 200 21445
+WARNING 2026-01-06 23:26:15,567 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:26:18,548 basehttp "GET /student_view_announcements/ HTTP/1.1" 200 26019
+WARNING 2026-01-06 23:26:18,602 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:26:30,587 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-06 23:26:30,619 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-06 23:26:32,841 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-06 23:26:50,566 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-06 23:26:50,824 basehttp "GET /admin_home/ HTTP/1.1" 200 38809
+WARNING 2026-01-06 23:26:50,891 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:26:55,907 basehttp "GET /manage_notifications/ HTTP/1.1" 200 28079
+WARNING 2026-01-06 23:26:55,970 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-06 23:27:07,326 basehttp "GET /edit_notification/3/ HTTP/1.1" 200 30206
+WARNING 2026-01-06 23:27:07,381 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-07 11:24:29,978 autoreload Watching for file changes with StatReloader
+INFO 2026-01-07 11:25:22,356 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-07 11:25:22,426 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-07 11:25:22,430 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-07 11:25:22,597 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-07 11:25:22,600 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2026-01-07 11:25:22,770 log Not Found: /favicon.ico
+WARNING 2026-01-07 11:25:22,771 basehttp "GET /favicon.ico HTTP/1.1" 404 45023
+INFO 2026-01-07 11:25:24,058 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-07 11:25:39,443 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-07 11:25:40,110 basehttp "GET /admin_home/ HTTP/1.1" 200 38809
+WARNING 2026-01-07 11:25:40,193 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-07 11:26:48,768 basehttp "GET /staff_leave_view/ HTTP/1.1" 200 23795
+WARNING 2026-01-07 11:26:48,835 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-07 11:27:03,746 basehttp "GET /manage_announcements/ HTTP/1.1" 200 28497
+WARNING 2026-01-07 11:27:03,812 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-07 11:27:08,260 basehttp "GET /manage_notifications/ HTTP/1.1" 200 28079
+WARNING 2026-01-07 11:27:08,329 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-07 11:28:24,111 basehttp "GET /admin_home/ HTTP/1.1" 200 38809
+WARNING 2026-01-07 11:28:24,174 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-07 11:29:33,368 basehttp "GET /admin_home/ HTTP/1.1" 200 38809
+WARNING 2026-01-07 11:29:33,419 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-07 14:41:49,967 basehttp "GET /staff_leave_view/ HTTP/1.1" 200 15269
+WARNING 2026-01-07 14:41:50,091 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:09:52,477 autoreload Watching for file changes with StatReloader
+INFO 2026-01-09 14:09:58,618 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-09 14:09:58,709 basehttp "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-09 14:09:58,709 basehttp "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-09 14:09:58,919 basehttp "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-09 14:09:58,926 basehttp "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2026-01-09 14:09:59,118 log Not Found: /favicon.ico
+WARNING 2026-01-09 14:09:59,119 basehttp "GET /favicon.ico HTTP/1.1" 404 45023
+INFO 2026-01-09 14:10:04,444 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-09 14:10:24,203 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-09 14:10:24,897 basehttp - Broken pipe from ('127.0.0.1', 64191)
+INFO 2026-01-09 14:10:25,543 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-09 14:10:25,868 basehttp "GET /admin_home/ HTTP/1.1" 200 38809
+WARNING 2026-01-09 14:10:25,927 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:10:29,290 basehttp "GET /manage_notifications/ HTTP/1.1" 200 28080
+WARNING 2026-01-09 14:10:29,360 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:10:38,664 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-09 14:10:38,702 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-09 14:10:40,136 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-09 14:10:51,829 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-09 14:10:51,947 basehttp "GET /staff_home/ HTTP/1.1" 200 27874
+WARNING 2026-01-09 14:10:52,016 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:10:54,355 basehttp "GET /staff_view_notifications/ HTTP/1.1" 200 23472
+WARNING 2026-01-09 14:10:54,410 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:19:50,535 autoreload Watching for file changes with StatReloader
+INFO 2026-01-09 14:19:56,728 basehttp "GET / HTTP/1.1" 200 18837
+WARNING 2026-01-09 14:19:57,152 log Not Found: /favicon.ico
+WARNING 2026-01-09 14:19:57,154 basehttp "GET /favicon.ico HTTP/1.1" 404 45022
+INFO 2026-01-09 14:19:59,246 basehttp "GET /login HTTP/1.1" 200 17965
+INFO 2026-01-09 14:20:13,189 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-09 14:20:13,302 basehttp "GET /student_home/ HTTP/1.1" 200 27247
+WARNING 2026-01-09 14:20:13,361 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:20:30,840 basehttp "GET /student_view_notifications/ HTTP/1.1" 200 21445
+WARNING 2026-01-09 14:20:30,907 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:25:18,365 autoreload Watching for file changes with StatReloader
+INFO 2026-01-09 14:25:55,776 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-09 14:25:57,586 basehttp "GET /login HTTP/1.1" 200 17964
+INFO 2026-01-09 14:26:08,783 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-09 14:26:09,099 basehttp "GET /admin_home/ HTTP/1.1" 200 38819
+WARNING 2026-01-09 14:26:09,145 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:26:12,987 basehttp "GET /add_staff/ HTTP/1.1" 200 25080
+WARNING 2026-01-09 14:26:13,035 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:26:14,874 basehttp "GET /manage_staff/ HTTP/1.1" 200 28848
+WARNING 2026-01-09 14:26:14,929 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:26:27,648 basehttp "GET /add_student/ HTTP/1.1" 200 25482
+WARNING 2026-01-09 14:26:27,718 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:26:29,564 basehttp "GET /manage_student/ HTTP/1.1" 200 31117
+WARNING 2026-01-09 14:26:29,624 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:26:36,459 basehttp "GET /delete_student/12/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:26:36,578 basehttp "GET /manage_student/ HTTP/1.1" 200 30997
+WARNING 2026-01-09 14:26:36,618 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:26:42,828 basehttp "GET /delete_student/15/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:26:42,958 basehttp "GET /manage_student/ HTTP/1.1" 200 30411
+WARNING 2026-01-09 14:26:43,003 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:27:13,069 basehttp "GET /delete_student/13/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:27:13,182 basehttp "GET /manage_student/ HTTP/1.1" 200 29818
+WARNING 2026-01-09 14:27:13,229 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:27:18,425 basehttp "GET /delete_student/14/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:27:18,624 basehttp "GET /manage_student/ HTTP/1.1" 200 29232
+WARNING 2026-01-09 14:27:18,672 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:27:28,166 basehttp "GET /edit_student/8 HTTP/1.1" 200 25516
+WARNING 2026-01-09 14:27:28,213 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:27:35,262 basehttp "POST /edit_student_save/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:27:35,336 basehttp "GET /edit_student/8 HTTP/1.1" 200 25990
+WARNING 2026-01-09 14:27:35,388 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:27:41,750 basehttp "GET /manage_student/ HTTP/1.1" 200 28794
+WARNING 2026-01-09 14:27:41,815 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:27:49,045 basehttp "GET /add_course/ HTTP/1.1" 200 23739
+WARNING 2026-01-09 14:27:49,103 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:27:50,531 basehttp "GET /manage_course/ HTTP/1.1" 200 28862
+WARNING 2026-01-09 14:27:50,582 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:27:55,458 basehttp "GET /delete_course/1/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:27:55,528 basehttp "GET /manage_course/ HTTP/1.1" 200 29484
+WARNING 2026-01-09 14:27:55,563 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:28:03,451 basehttp "GET /delete_course/3/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:28:03,524 basehttp "GET /manage_course/ HTTP/1.1" 200 28930
+WARNING 2026-01-09 14:28:03,569 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:28:08,174 basehttp "GET /delete_course/1/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:28:08,232 basehttp "GET /manage_course/ HTTP/1.1" 200 28918
+WARNING 2026-01-09 14:28:08,280 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:28:16,673 basehttp "GET /delete_course/1/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:28:16,743 basehttp "GET /manage_course/ HTTP/1.1" 200 28918
+WARNING 2026-01-09 14:28:16,800 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:28:20,372 basehttp "GET /add_subject/ HTTP/1.1" 200 24333
+WARNING 2026-01-09 14:28:20,423 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:28:22,044 basehttp "GET /manage_course/ HTTP/1.1" 200 28296
+WARNING 2026-01-09 14:28:22,084 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:28:26,413 basehttp "GET /delete_course/1/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:28:26,478 basehttp "GET /manage_course/ HTTP/1.1" 200 28918
+WARNING 2026-01-09 14:28:26,523 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:28:31,865 basehttp "GET /edit_course/1/ HTTP/1.1" 200 23874
+WARNING 2026-01-09 14:28:31,920 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:28:51,434 basehttp "POST /edit_course_save/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:28:51,520 basehttp "GET /edit_course/1 HTTP/1.1" 301 0
+INFO 2026-01-09 14:28:51,591 basehttp "GET /edit_course/1/ HTTP/1.1" 200 24535
+WARNING 2026-01-09 14:28:51,635 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:28:56,126 basehttp "GET /manage_course/ HTTP/1.1" 200 28299
+WARNING 2026-01-09 14:28:56,181 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:29:06,743 basehttp "GET /edit_course/1/ HTTP/1.1" 200 23877
+WARNING 2026-01-09 14:29:06,808 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:29:13,031 basehttp "POST /edit_course_save/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:29:13,124 basehttp "GET /edit_course/1 HTTP/1.1" 301 0
+INFO 2026-01-09 14:29:13,224 basehttp "GET /edit_course/1/ HTTP/1.1" 200 24533
+WARNING 2026-01-09 14:29:13,280 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:29:15,643 basehttp "POST /edit_course_save/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:29:15,719 basehttp "GET /edit_course/1 HTTP/1.1" 301 0
+INFO 2026-01-09 14:29:15,773 basehttp "GET /edit_course/1/ HTTP/1.1" 200 24533
+WARNING 2026-01-09 14:29:15,815 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:29:17,852 basehttp "GET /manage_course/ HTTP/1.1" 200 28297
+WARNING 2026-01-09 14:29:17,906 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:29:22,803 basehttp "GET /manage_subject/ HTTP/1.1" 200 33044
+WARNING 2026-01-09 14:29:22,852 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:29:50,489 basehttp "GET /manage_session/ HTTP/1.1" 200 27102
+WARNING 2026-01-09 14:29:50,552 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:30:04,501 basehttp "GET /admin_view_attendance/ HTTP/1.1" 200 27415
+WARNING 2026-01-09 14:30:04,567 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:30:08,237 basehttp "GET /student_feedback_message/ HTTP/1.1" 200 51381
+WARNING 2026-01-09 14:30:08,294 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:30:29,791 basehttp "GET /staff_feedback_message/ HTTP/1.1" 200 47711
+WARNING 2026-01-09 14:30:29,856 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:30:42,341 basehttp "GET /student_leave_view/ HTTP/1.1" 200 49955
+WARNING 2026-01-09 14:30:42,411 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:30:56,125 basehttp "GET /staff_leave_view/ HTTP/1.1" 200 46822
+WARNING 2026-01-09 14:30:56,186 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:31:03,450 basehttp "GET /manage_announcements/ HTTP/1.1" 200 33192
+WARNING 2026-01-09 14:31:03,503 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:31:13,840 basehttp "GET /delete_announcement/4/ HTTP/1.1" 302 0
+INFO 2026-01-09 14:31:13,909 basehttp "GET /manage_announcements/ HTTP/1.1" 200 32687
+WARNING 2026-01-09 14:31:13,964 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:31:18,616 basehttp "GET /manage_notifications/ HTTP/1.1" 200 197962
+WARNING 2026-01-09 14:31:18,674 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:31:31,796 basehttp "GET /logout_user HTTP/1.1" 302 0
+INFO 2026-01-09 14:31:31,830 basehttp "GET / HTTP/1.1" 200 18837
+INFO 2026-01-09 14:31:33,377 basehttp "GET /login HTTP/1.1" 200 17966
+INFO 2026-01-09 14:31:47,692 basehttp "POST /doLogin HTTP/1.1" 302 0
+INFO 2026-01-09 14:31:47,752 basehttp "GET /student_home/ HTTP/1.1" 200 27247
+WARNING 2026-01-09 14:31:47,798 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:31:51,051 basehttp "GET /student_view_attendance/ HTTP/1.1" 200 22547
+WARNING 2026-01-09 14:31:51,095 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:31:53,944 basehttp "GET /student_apply_leave/ HTTP/1.1" 200 21646
+WARNING 2026-01-09 14:31:53,992 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:31:55,696 basehttp "GET /student_feedback/ HTTP/1.1" 200 21544
+WARNING 2026-01-09 14:31:55,754 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:31:57,087 basehttp "GET /student_view_result/ HTTP/1.1" 200 21736
+WARNING 2026-01-09 14:31:57,134 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:31:59,720 basehttp "GET /student_view_subjects/ HTTP/1.1" 200 22408
+WARNING 2026-01-09 14:31:59,784 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:32:03,632 basehttp "GET /student_view_announcements/ HTTP/1.1" 200 29410
+WARNING 2026-01-09 14:32:03,697 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:32:15,193 basehttp "GET /student_view_notifications/ HTTP/1.1" 200 29298
+WARNING 2026-01-09 14:32:15,244 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969
+INFO 2026-01-09 14:32:21,674 basehttp "GET /student_profile/ HTTP/1.1" 200 22668
+WARNING 2026-01-09 14:32:21,739 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1969

@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Add Announcement
+{% endblock page_title %}
+
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Add Announcement</h3>
+                </div>
+
+                <form role="form" method="post" action="{% url 'add_announcement_save' %}">
+                    {% csrf_token %}
+                    <div class="card-body">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" name="title" placeholder="Announcement Title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea class="form-control" name="message" rows="4" placeholder="Announcement Message" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Target Audience</label>
+                            <select class="form-control" name="target_audience" required>
+                                <option value="all">All Users</option>
+                                <option value="students">Students Only</option>
+                                <option value="staff">Staff Only</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Urgency</label>
+                            <select class="form-control" name="urgency" required>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" name="category" required>
+                                <option value="academic">Academic</option>
+                                <option value="administrative">Administrative</option>
+                                <option value="event">Event</option>
+                                <option value="general">General</option>
+                                <option value="important">Important</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Scheduled Date (Optional)</label>
+                            <input type="datetime-local" class="form-control" name="scheduled_date">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Expiry Date (Optional)</label>
+                            <input type="datetime-local" class="form-control" name="expiry_date">
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Add Announcement</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

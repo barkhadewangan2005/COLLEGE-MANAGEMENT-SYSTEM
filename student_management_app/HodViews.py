@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 import json
 
-from .models import CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, Attendance, AttendanceReport, LeaveReportStudent, LeaveReportStaff, FeedBackStudent, FeedBackStaffs
+from .models import CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, Attendance, AttendanceReport, LeaveReportStudent, LeaveReportStaff, FeedBackStudent, FeedBackStaffs, Announcement, Notification
 
 
 def admin_home(request):
@@ -753,3 +753,214 @@ def admin_profile_update(request):
         except Exception as e:
             messages.error(request, "Failed to Update Profile")
             return redirect('admin_profile')
+
+
+# Announcement Management Views
+def manage_announcements(request):
+    announcements = Announcement.objects.all()
+    context = {
+        "announcements": announcements
+    }
+    return render(request, "hod_template/manage_announcements.html", context)
+
+
+def add_announcement(request):
+    return render(request, "hod_template/add_announcement_template.html")
+
+
+def add_announcement_save(request):
+    if request.method != "POST":
+        messages.error(request, "Invalid Method")
+        return redirect('add_announcement')
+    else:
+        title = request.POST.get('title')
+        message = request.POST.get('message')
+        target_audience = request.POST.get('target_audience')
+        urgency = request.POST.get('urgency')
+        category = request.POST.get('category')
+        scheduled_date = request.POST.get('scheduled_date')
+        expiry_date = request.POST.get('expiry_date')
+
+        try:
+            announcement = Announcement(
+                title=title,
+                message=message,
+                target_audience=target_audience,
+                urgency=urgency,
+                category=category,
+                scheduled_date=scheduled_date if scheduled_date else None,
+                expiry_date=expiry_date if expiry_date else None,
+                created_by=request.user
+            )
+            announcement.save()
+            messages.success(request, "Announcement Added Successfully!")
+            return redirect('add_announcement')
+        except Exception as e:
+            messages.error(request, "Failed to Add Announcement!")
+            return redirect('add_announcement')
+
+
+def edit_announcement(request, announcement_id):
+    announcement = Announcement.objects.get(id=announcement_id)
+    context = {
+        "announcement": announcement,
+        "id": announcement_id
+    }
+    return render(request, "hod_template/edit_announcement_template.html", context)
+
+
+def edit_announcement_save(request):
+    if request.method != "POST":
+        return HttpResponse("Invalid Method")
+    else:
+        announcement_id = request.POST.get('announcement_id')
+        title = request.POST.get('title')
+        message = request.POST.get('message')
+        target_audience = request.POST.get('target_audience')
+        urgency = request.POST.get('urgency')
+        category = request.POST.get('category')
+        scheduled_date = request.POST.get('scheduled_date')
+        expiry_date = request.POST.get('expiry_date')
+        is_active = request.POST.get('is_active') == 'on'
+
+        try:
+            announcement = Announcement.objects.get(id=announcement_id)
+            announcement.title = title
+            announcement.message = message
+            announcement.target_audience = target_audience
+            announcement.urgency = urgency
+            announcement.category = category
+            announcement.scheduled_date = scheduled_date if scheduled_date else None
+            announcement.expiry_date = expiry_date if expiry_date else None
+            announcement.is_active = is_active
+            announcement.save()
+
+            messages.success(request, "Announcement Updated Successfully.")
+            return redirect('/edit_announcement/'+announcement_id)
+        except Exception as e:
+            messages.error(request, "Failed to Update Announcement.")
+            return redirect('/edit_announcement/'+announcement_id)
+
+
+def delete_announcement(request, announcement_id):
+    announcement = Announcement.objects.get(id=announcement_id)
+    try:
+        announcement.delete()
+        messages.success(request, "Announcement Deleted Successfully.")
+        return redirect('manage_announcements')
+    except Exception as e:
+        messages.error(request, "Failed to Delete Announcement.")
+        return redirect('manage_announcements')
+
+
+# Notification Management Views
+def manage_notifications(request):
+    notifications = Notification.objects.all()
+    context = {
+        "notifications": notifications
+    }
+    return render(request, "hod_template/manage_notifications.html", context)
+
+
+def add_notification(request):
+    users = CustomUser.objects.all()
+    context = {
+        "users": users
+    }
+    return render(request, "hod_template/add_notification_template.html", context)
+
+
+def add_notification_save(request):
+    if request.method != "POST":
+        messages.error(request, "Invalid Method")
+        return redirect('add_notification')
+    else:
+        user_id = request.POST.get('user')
+        title = request.POST.get('title')
+        message = request.POST.get('message')
+        notification_type = request.POST.get('notification_type')
+        urgency = request.POST.get('urgency')
+        category = request.POST.get('category')
+        scheduled_date = request.POST.get('scheduled_date')
+        expiry_date = request.POST.get('expiry_date')
+        link = request.POST.get('link')
+
+        try:
+            user = CustomUser.objects.get(id=user_id)
+            notification = Notification(
+                user=user,
+                title=title,
+                message=message,
+                notification_type=notification_type,
+                urgency=urgency,
+                category=category,
+                scheduled_date=scheduled_date if scheduled_date else None,
+                expiry_date=expiry_date if expiry_date else None,
+                link=link if link else None
+            )
+            notification.save()
+            messages.success(request, "Notification Added Successfully!")
+            return redirect('add_notification')
+        except Exception as e:
+            messages.error(request, "Failed to Add Notification!")
+            return redirect('add_notification')
+
+
+def edit_notification(request, notification_id):
+    notification = Notification.objects.get(id=notification_id)
+    users = CustomUser.objects.all()
+    context = {
+        "notification": notification,
+        "users": users,
+        "id": notification_id
+    }
+    return render(request, "hod_template/edit_notification_template.html", context)
+
+
+def edit_notification_save(request):
+    if request.method != "POST":
+        return HttpResponse("Invalid Method")
+    else:
+        notification_id = request.POST.get('notification_id')
+        user_id = request.POST.get('user')
+        title = request.POST.get('title')
+        message = request.POST.get('message')
+        notification_type = request.POST.get('notification_type')
+        urgency = request.POST.get('urgency')
+        category = request.POST.get('category')
+        scheduled_date = request.POST.get('scheduled_date')
+        expiry_date = request.POST.get('expiry_date')
+        is_read = request.POST.get('is_read') == 'on'
+        link = request.POST.get('link')
+
+        try:
+            notification = Notification.objects.get(id=notification_id)
+            user = CustomUser.objects.get(id=user_id)
+            notification.user = user
+            notification.title = title
+            notification.message = message
+            notification.notification_type = notification_type
+            notification.urgency = urgency
+            notification.category = category
+            notification.scheduled_date = scheduled_date if scheduled_date else None
+            notification.expiry_date = expiry_date if expiry_date else None
+            notification.is_read = is_read
+            notification.link = link if link else None
+            notification.save()
+
+            messages.success(request, "Notification Updated Successfully.")
+            return redirect('/edit_notification/'+notification_id)
+        except Exception as e:
+            messages.error(request, "Failed to Update Notification.")
+            return redirect('/edit_notification/'+notification_id)
+
+
+def delete_notification(request, notification_id):
+    notification = Notification.objects.get(id=notification_id)
+    try:
+        notification.delete()
+        messages.success(request, "Notification Deleted Successfully.")
+        return redirect('manage_notifications')
+    except Exception as e:
+        messages.error(request, "Failed to Delete Notification.")
+        return redirect('manage_notifications')

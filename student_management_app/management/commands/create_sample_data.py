@@ -1,8 +1,10 @@
 from django.core.management.base import BaseCommand
 from student_management_app.models import (
-    CustomUser, Courses, SessionYearModel, Staffs, Students, Subjects
+    CustomUser, Courses, SessionYearModel, Staffs, Students, Subjects,
+    Announcement, Notification, FeedBackStudent, FeedBackStaffs,
+    LeaveReportStudent, LeaveReportStaff
 )
-from datetime import date
+from datetime import date, datetime, timedelta
 
 class Command(BaseCommand):
     help = 'Creates comprehensive sample data for testing the College Management System'
@@ -219,6 +221,223 @@ class Command(BaseCommand):
                     f'  ⚠ Already exists: {student_info["first_name"]} {student_info["last_name"]}'
                 ))
 
+        # Get admin user
+        admin_user = CustomUser.objects.filter(user_type='1').first()
+        if not admin_user:
+            admin_user = CustomUser.objects.create_user(
+                username='admin',
+                email='admin@college.com',
+                password='admin123',
+                first_name='Admin',
+                last_name='User',
+                user_type='1'
+            )
+            self.stdout.write(self.style.SUCCESS('  ✓ Created: Admin User'))
+
+        # Create Announcements
+        self.stdout.write(self.style.WARNING('\n📢 Creating Announcements...'))
+        announcements_data = [
+            {
+                'title': 'Welcome to New Academic Year 2024',
+                'message': 'Dear students and faculty, we are excited to welcome you to the new academic year. Please check your course schedules and ensure all documents are updated.',
+                'target_audience': 'all',
+                'urgency': 'medium',
+                'category': 'general',
+                'expiry_date': datetime.now() + timedelta(days=30)
+            },
+            {
+                'title': 'Mid-Semester Examination Schedule',
+                'message': 'Mid-semester examinations will begin from next week. Please check the examination portal for detailed schedules and seating arrangements.',
+                'target_audience': 'students',
+                'urgency': 'high',
+                'category': 'academic',
+                'expiry_date': datetime.now() + timedelta(days=14)
+            },
+            {
+                'title': 'Faculty Development Workshop',
+                'message': 'A workshop on modern teaching methodologies will be conducted for all faculty members. Participation is mandatory.',
+                'target_audience': 'staff',
+                'urgency': 'medium',
+                'category': 'administrative',
+                'expiry_date': datetime.now() + timedelta(days=7)
+            },
+            {
+                'title': 'Annual Sports Meet Registration',
+                'message': 'Registration for the annual sports meet is now open. Students interested in participating should register through the student portal.',
+                'target_audience': 'students',
+                'urgency': 'low',
+                'category': 'events',
+                'expiry_date': datetime.now() + timedelta(days=21)
+            }
+        ]
+
+        for announcement_data in announcements_data:
+            announcement, created = Announcement.objects.get_or_create(
+                title=announcement_data['title'],
+                defaults={
+                    'message': announcement_data['message'],
+                    'target_audience': announcement_data['target_audience'],
+                    'urgency': announcement_data['urgency'],
+                    'category': announcement_data['category'],
+                    'expiry_date': announcement_data['expiry_date'],
+                    'created_by': admin_user
+                }
+            )
+            if created:
+                self.stdout.write(self.style.SUCCESS(f'  ✓ Created: {announcement.title}'))
+            else:
+                self.stdout.write(self.style.WARNING(f'  ⚠ Already exists: {announcement.title}'))
+
+        # Create Notifications
+        self.stdout.write(self.style.WARNING('\n🔔 Creating Notifications...'))
+        all_users = list(CustomUser.objects.all())
+        notification_data = [
+            {
+                'title': 'Profile Update Required',
+                'message': 'Please update your profile information including contact details and emergency contacts.',
+                'notification_type': 'general',
+                'urgency': 'medium',
+                'category': 'administrative'
+            },
+            {
+                'title': 'Attendance Alert',
+                'message': 'Your attendance in Data Structures is below 75%. Please improve your attendance.',
+                'notification_type': 'attendance',
+                'urgency': 'high',
+                'category': 'academic'
+            },
+            {
+                'title': 'Leave Request Approved',
+                'message': 'Your leave request for medical reasons has been approved.',
+                'notification_type': 'leave',
+                'urgency': 'low',
+                'category': 'administrative'
+            },
+            {
+                'title': 'Result Published',
+                'message': 'Your semester examination results have been published. Check your student portal.',
+                'notification_type': 'result',
+                'urgency': 'medium',
+                'category': 'academic'
+            },
+            {
+                'title': 'Feedback Response',
+                'message': 'Your feedback has been reviewed. Thank you for your valuable input.',
+                'notification_type': 'feedback',
+                'urgency': 'low',
+                'category': 'general'
+            }
+        ]
+
+        for user in all_users:
+            for notif_data in notification_data:
+                notification, created = Notification.objects.get_or_create(
+                    user=user,
+                    title=notif_data['title'],
+                    defaults={
+                        'message': notif_data['message'],
+                        'notification_type': notif_data['notification_type'],
+                        'urgency': notif_data['urgency'],
+                        'category': notif_data['category']
+                    }
+                )
+                if created:
+                    self.stdout.write(self.style.SUCCESS(f'  ✓ Created notification for {user.username}: {notif_data["title"]}'))
+
+        # Create Student Feedback
+        self.stdout.write(self.style.WARNING('\n💬 Creating Student Feedback...'))
+        students = Students.objects.all()
+        feedback_data = [
+            'The teaching quality is excellent and the course content is very relevant.',
+            'More practical sessions would be helpful for better understanding.',
+            'The library resources are adequate but could be improved.',
+            'Faculty members are very supportive and approachable.',
+            'The campus facilities need better maintenance.'
+        ]
+
+        for student in students:
+            for i, feedback_text in enumerate(feedback_data):
+                feedback, created = FeedBackStudent.objects.get_or_create(
+                    student_id=student,
+                    feedback=feedback_text,
+                    defaults={
+                        'feedback_reply': 'Thank you for your feedback. We will consider your suggestions for improvement.' if i % 2 == 0 else ''
+                    }
+                )
+                if created:
+                    self.stdout.write(self.style.SUCCESS(f'  ✓ Created feedback for {student.admin.username}'))
+
+        # Create Staff Feedback
+        self.stdout.write(self.style.WARNING('\n👨‍🏫 Creating Staff Feedback...'))
+        staffs = Staffs.objects.all()
+        staff_feedback_data = [
+            'The administrative support is good but could be more efficient.',
+            'More professional development opportunities would be beneficial.',
+            'The work environment is conducive to teaching and research.',
+            'Salary and benefits are competitive in the industry.',
+            'More research funding would help in academic pursuits.'
+        ]
+
+        for staff in staffs:
+            for i, feedback_text in enumerate(staff_feedback_data):
+                feedback, created = FeedBackStaffs.objects.get_or_create(
+                    staff_id=staff,
+                    feedback=feedback_text,
+                    defaults={
+                        'feedback_reply': 'Thank you for your feedback. We value your input for continuous improvement.' if i % 2 == 0 else ''
+                    }
+                )
+                if created:
+                    self.stdout.write(self.style.SUCCESS(f'  ✓ Created feedback for {staff.admin.username}'))
+
+        # Create Student Leave Requests
+        self.stdout.write(self.style.WARNING('\n📝 Creating Student Leave Requests...'))
+        leave_reasons = [
+            'Medical emergency - fever and flu',
+            'Family function - cousin marriage',
+            'Personal reasons - urgent work at home',
+            'Sports event participation',
+            'Medical checkup appointment'
+        ]
+
+        for student in students:
+            for i, reason in enumerate(leave_reasons):
+                leave_date = (datetime.now() + timedelta(days=i+1)).strftime('%Y-%m-%d')
+                leave, created = LeaveReportStudent.objects.get_or_create(
+                    student_id=student,
+                    leave_date=leave_date,
+                    defaults={
+                        'leave_message': reason,
+                        'leave_status': 1 if i % 2 == 0 else 0  # Alternate approved/pending
+                    }
+                )
+                if created:
+                    self.stdout.write(self.style.SUCCESS(f'  ✓ Created leave request for {student.admin.username}: {reason}'))
+
+        # Create Staff Leave Requests
+        self.stdout.write(self.style.WARNING('\n🏖️ Creating Staff Leave Requests...'))
+        staff_leave_reasons = [
+            'Medical leave - doctor appointment',
+            'Personal leave - family matters',
+            'Casual leave - personal work',
+            'Earned leave - vacation',
+            'Sick leave - health issues'
+        ]
+
+        for staff in staffs:
+            for i, reason in enumerate(staff_leave_reasons):
+                leave_date = (datetime.now() + timedelta(days=i+2)).strftime('%Y-%m-%d')
+                leave, created = LeaveReportStaff.objects.get_or_create(
+                    staff_id=staff,
+                    leave_date=leave_date,
+                    defaults={
+                        'leave_message': reason,
+                        'leave_status': 1 if i % 2 == 0 else 0  # Alternate approved/pending
+                    }
+                )
+                if created:
+                    self.stdout.write(self.style.SUCCESS(f'  ✓ Created leave request for {staff.admin.username}: {reason}'))
+
         # Summary
         self.stdout.write(self.style.SUCCESS('\n' + '='*60))
         self.stdout.write(self.style.SUCCESS('✓ SAMPLE DATA CREATION COMPLETED!'))
@@ -229,6 +448,12 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(f'  • Staff Members: {Staffs.objects.count()}'))
         self.stdout.write(self.style.SUCCESS(f'  • Subjects: {Subjects.objects.count()}'))
         self.stdout.write(self.style.SUCCESS(f'  • Students: {Students.objects.count()}'))
+        self.stdout.write(self.style.SUCCESS(f'  • Announcements: {Announcement.objects.count()}'))
+        self.stdout.write(self.style.SUCCESS(f'  • Notifications: {Notification.objects.count()}'))
+        self.stdout.write(self.style.SUCCESS(f'  • Student Feedback: {FeedBackStudent.objects.count()}'))
+        self.stdout.write(self.style.SUCCESS(f'  • Staff Feedback: {FeedBackStaffs.objects.count()}'))
+        self.stdout.write(self.style.SUCCESS(f'  • Student Leave Requests: {LeaveReportStudent.objects.count()}'))
+        self.stdout.write(self.style.SUCCESS(f'  • Staff Leave Requests: {LeaveReportStaff.objects.count()}'))
         self.stdout.write(self.style.SUCCESS(f'  • Total Users: {CustomUser.objects.count()}'))
         
         self.stdout.write(self.style.SUCCESS('\n📝 TEST CREDENTIALS:'))

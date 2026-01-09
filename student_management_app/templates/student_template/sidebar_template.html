@@ -49,6 +49,22 @@
     </li>
 
     <li class="nav-item">
+        <a href="{% url 'student_view_announcements' %}"
+            class="nav-link {% if request.path == '/student_view_announcements/' %} active {% endif %}">
+            <i class="nav-icon fas fa-bullhorn"></i>
+            <p>Announcements</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="{% url 'student_view_notifications' %}"
+            class="nav-link {% if request.path == '/student_view_notifications/' %} active {% endif %}">
+            <i class="nav-icon fas fa-bell"></i>
+            <p>My Notifications</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
         <a href="{% url 'student_profile' %}"
             class="nav-link {% if request.path == '/student_profile/' %} active {% endif %}">
             <i class="nav-icon fas fa-user-edit"></i>

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Edit Announcement
+{% endblock page_title %}
+
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Edit Announcement</h3>
+                </div>
+
+                <form role="form" method="post" action="{% url 'edit_announcement_save' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="announcement_id" value="{{ announcement.id }}">
+                    <div class="card-body">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" name="title" value="{{ announcement.title }}" placeholder="Announcement Title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea class="form-control" name="message" rows="4" placeholder="Announcement Message" required>{{ announcement.message }}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Target Audience</label>
+                            <select class="form-control" name="target_audience" required>
+                                <option value="all" {% if announcement.target_audience == 'all' %}selected{% endif %}>All Users</option>
+                                <option value="students" {% if announcement.target_audience == 'students' %}selected{% endif %}>Students Only</option>
+                                <option value="staff" {% if announcement.target_audience == 'staff' %}selected{% endif %}>Staff Only</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Urgency</label>
+                            <select class="form-control" name="urgency" required>
+                                <option value="low" {% if announcement.urgency == 'low' %}selected{% endif %}>Low</option>
+                                <option value="medium" {% if announcement.urgency == 'medium' %}selected{% endif %}>Medium</option>
+                                <option value="high" {% if announcement.urgency == 'high' %}selected{% endif %}>High</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" name="category" required>
+                                <option value="academic" {% if announcement.category == 'academic' %}selected{% endif %}>Academic</option>
+                                <option value="administrative" {% if announcement.category == 'administrative' %}selected{% endif %}>Administrative</option>
+                                <option value="event" {% if announcement.category == 'event' %}selected{% endif %}>Event</option>
+                                <option value="general" {% if announcement.category == 'general' %}selected{% endif %}>General</option>
+                                <option value="important" {% if announcement.category == 'important' %}selected{% endif %}>Important</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Scheduled Date (Optional)</label>
+                            <input type="datetime-local" class="form-control" name="scheduled_date" value="{% if announcement.scheduled_date %}{{ announcement.scheduled_date|date:'Y-m-d\TH:i' }}{% endif %}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Expiry Date (Optional)</label>
+                            <input type="datetime-local" class="form-control" name="expiry_date" value="{% if announcement.expiry_date %}{{ announcement.expiry_date|date:'Y-m-d\TH:i' }}{% endif %}">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" type="checkbox" id="is_active" name="is_active" {% if announcement.is_active %}checked{% endif %}>
+                                <label for="is_active" class="custom-control-label">Active</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Update Announcement</button>
+                        <a href="{% url 'manage_announcements' %}" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

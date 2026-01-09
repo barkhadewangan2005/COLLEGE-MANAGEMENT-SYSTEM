@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Manage Notifications
+{% endblock page_title %}
+
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Manage Notifications</h3>
+                    <a href="{% url 'add_notification' %}" class="btn btn-primary float-right">Add New Notification</a>
+                </div>
+
+                <div class="card-body">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Title</th>
+                                <th>Type</th>
+                                <th>Urgency</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Created At</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for notification in notifications %}
+                            <tr>
+                                <td>{{ notification.id }}</td>
+                                <td>{{ notification.user.first_name }} {{ notification.user.last_name }}</td>
+                                <td>{{ notification.title }}</td>
+                                <td>
+                                    <span class="badge badge-{% if notification.notification_type == 'alert' %}danger{% elif notification.notification_type == 'warning' %}warning{% elif notification.notification_type == 'reminder' %}info{% else %}secondary{% endif %}">
+                                        {{ notification.get_notification_type_display }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge badge-{% if notification.urgency == 'high' %}danger{% elif notification.urgency == 'medium' %}warning{% else %}secondary{% endif %}">
+                                        {{ notification.get_urgency_display }}
+                                    </span>
+                                </td>
+                                <td>{{ notification.get_category_display }}</td>
+                                <td>
+                                    {% if notification.is_read %}
+                                        <span class="badge badge-success">Read</span>
+                                    {% else %}
+                                        <span class="badge badge-warning">Unread</span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ notification.created_at|date:"M d, Y" }}</td>
+                                <td>
+                                    <a href="{% url 'edit_notification' notification.id %}" class="btn btn-success btn-sm">Edit</a>
+                                    <a href="{% url 'delete_notification' notification.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

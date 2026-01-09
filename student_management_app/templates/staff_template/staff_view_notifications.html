@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+View Notifications
+{% endblock %}
+
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">My Notifications</h4>
+                </div>
+                <div class="card-body">
+                    {% if notifications %}
+                        <div class="list-group">
+                            {% for notification in notifications %}
+                                <div class="list-group-item {% if not notification.is_read %}bg-light{% endif %}">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">{{ notification.title }}</h5>
+                                        <small class="text-muted">
+                                            {% if notification.urgency == 'high' %}
+                                                <span class="badge badge-danger">High Priority</span>
+                                            {% elif notification.urgency == 'medium' %}
+                                                <span class="badge badge-warning">Medium Priority</span>
+                                            {% else %}
+                                                <span class="badge badge-info">Low Priority</span>
+                                            {% endif %}
+                                            {% if not notification.is_read %}
+                                                <span class="badge badge-success">New</span>
+                                            {% endif %}
+                                        </small>
+                                    </div>
+                                    <p class="mb-1">{{ notification.message }}</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <small class="text-muted">
+                                                <strong>Type:</strong> {{ notification.notification_type|title }}
+                                            </small>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <small class="text-muted">
+                                                {{ notification.created_at|date:"M d, Y H:i" }}
+                                            </small>
+                                        </div>
+                                    </div>
+                                    {% if notification.link %}
+                                        <div class="mt-2">
+                                            <a href="{{ notification.link }}" class="btn btn-sm btn-primary" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> View Details
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle"></i> No notifications available at this time.
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

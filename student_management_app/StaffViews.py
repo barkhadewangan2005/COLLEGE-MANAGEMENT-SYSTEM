@@ -8,7 +8,7 @@ from django.core import serializers
 import json
 
 
-from .models import CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, Attendance, AttendanceReport, LeaveReportStaff, FeedBackStaffs, StudentResult
+from .models import CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, Attendance, AttendanceReport, LeaveReportStaff, FeedBackStaffs, StudentResult, Announcement, Notification
 
 
 def staff_home(request):
@@ -413,3 +413,32 @@ def staff_view_students(request):
         "students": students,
     }
     return render(request, "staff_template/staff_view_students.html", context)
+
+
+def staff_view_announcements(request):
+    # Get announcements targeted to staff or all users
+    announcements = Announcement.objects.filter(
+        is_active=True,
+        target_audience__in=['all', 'staff']
+    ).order_by('-created_at')
+
+    context = {
+        "announcements": announcements
+    }
+    return render(request, "staff_template/staff_view_announcements.html", context)
+
+
+def staff_view_notifications(request):
+    # Get notifications for the current staff user
+    notifications = Notification.objects.filter(
+        user=request.user
+    ).order_by('-created_at')
+
+    # Mark notifications as read when viewed
+    unread_notifications = notifications.filter(is_read=False)
+    unread_notifications.update(is_read=True)
+
+    context = {
+        "notifications": notifications
+    }
+    return render(request, "staff_template/staff_view_notifications.html", context)

@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Edit Notification
+{% endblock page_title %}
+
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Edit Notification</h3>
+                </div>
+
+                <form role="form" method="post" action="{% url 'edit_notification_save' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="notification_id" value="{{ notification.id }}">
+                    <div class="card-body">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <div class="form-group">
+                            <label>User</label>
+                            <select class="form-control" name="user" required>
+                                {% for user in users %}
+                                <option value="{{ user.id }}" {% if user.id == notification.user.id %}selected{% endif %}>{{ user.first_name }} {{ user.last_name }} ({{ user.username }})</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" name="title" value="{{ notification.title }}" placeholder="Notification Title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea class="form-control" name="message" rows="4" placeholder="Notification Message" required>{{ notification.message }}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Notification Type</label>
+                            <select class="form-control" name="notification_type" required>
+                                <option value="info" {% if notification.notification_type == 'info' %}selected{% endif %}>Information</option>
+                                <option value="warning" {% if notification.notification_type == 'warning' %}selected{% endif %}>Warning</option>
+                                <option value="alert" {% if notification.notification_type == 'alert' %}selected{% endif %}>Alert</option>
+                                <option value="reminder" {% if notification.notification_type == 'reminder' %}selected{% endif %}>Reminder</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Urgency</label>
+                            <select class="form-control" name="urgency" required>
+                                <option value="low" {% if notification.urgency == 'low' %}selected{% endif %}>Low</option>
+                                <option value="medium" {% if notification.urgency == 'medium' %}selected{% endif %}>Medium</option>
+                                <option value="high" {% if notification.urgency == 'high' %}selected{% endif %}>High</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" name="category" required>
+                                <option value="academic" {% if notification.category == 'academic' %}selected{% endif %}>Academic</option>
+                                <option value="administrative" {% if notification.category == 'administrative' %}selected{% endif %}>Administrative</option>
+                                <option value="event" {% if notification.category == 'event' %}selected{% endif %}>Event</option>
+                                <option value="general" {% if notification.category == 'general' %}selected{% endif %}>General</option>
+                                <option value="important" {% if notification.category == 'important' %}selected{% endif %}>Important</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Scheduled Date (Optional)</label>
+                            <input type="datetime-local" class="form-control" name="scheduled_date" value="{% if notification.scheduled_date %}{{ notification.scheduled_date|date:'Y-m-d\TH:i' }}{% endif %}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Expiry Date (Optional)</label>
+                            <input type="datetime-local" class="form-control" name="expiry_date" value="{% if notification.expiry_date %}{{ notification.expiry_date|date:'Y-m-d\TH:i' }}{% endif %}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Link (Optional)</label>
+                            <input type="url" class="form-control" name="link" value="{{ notification.link }}" placeholder="https://example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" type="checkbox" id="is_read" name="is_read" {% if notification.is_read %}checked{% endif %}>
+                                <label for="is_read" class="custom-control-label">Mark as Read</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Update Notification</button>
+                        <a href="{% url 'manage_notifications' %}" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

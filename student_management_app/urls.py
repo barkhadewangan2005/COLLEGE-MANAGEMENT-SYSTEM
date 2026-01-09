@@ -24,6 +24,8 @@ urlpatterns = [
     path('student_profile_update/', StudentViews.student_profile_update, name="student_profile_update"),
     path('student_view_result/', StudentViews.student_view_result, name="student_view_result"),
     path('student_view_subjects/', StudentViews.student_view_subjects, name="student_view_subjects"),
+    path('student_view_announcements/', StudentViews.student_view_announcements, name="student_view_announcements"),
+    path('student_view_notifications/', StudentViews.student_view_notifications, name="student_view_notifications"),
 
 
      # URLS for Staff
@@ -46,6 +48,8 @@ urlpatterns = [
     path('staff_view_result/', StaffViews.staff_view_result, name="staff_view_result"),
     path('staff_view_subjects/', StaffViews.staff_view_subjects, name="staff_view_subjects"),
     path('staff_view_students/', StaffViews.staff_view_students, name="staff_view_students"),
+    path('staff_view_announcements/', StaffViews.staff_view_announcements, name="staff_view_announcements"),
+    path('staff_view_notifications/', StaffViews.staff_view_notifications, name="staff_view_notifications"),
     
     # URL for Admin
     path('admin_home/', HodViews.admin_home, name="admin_home"),
@@ -96,5 +100,21 @@ urlpatterns = [
     path('admin_get_attendance_student/', HodViews.admin_get_attendance_student, name="admin_get_attendance_student"),
     path('admin_profile/', HodViews.admin_profile, name="admin_profile"),
     path('admin_profile_update/', HodViews.admin_profile_update, name="admin_profile_update"),
-    
+
+    # Announcement Management URLs
+    path('manage_announcements/', HodViews.manage_announcements, name="manage_announcements"),
+    path('add_announcement/', HodViews.add_announcement, name="add_announcement"),
+    path('add_announcement_save/', HodViews.add_announcement_save, name="add_announcement_save"),
+    path('edit_announcement/<announcement_id>/', HodViews.edit_announcement, name="edit_announcement"),
+    path('edit_announcement_save/', HodViews.edit_announcement_save, name="edit_announcement_save"),
+    path('delete_announcement/<announcement_id>/', HodViews.delete_announcement, name="delete_announcement"),
+
+    # Notification Management URLs
+    path('manage_notifications/', HodViews.manage_notifications, name="manage_notifications"),
+    path('add_notification/', HodViews.add_notification, name="add_notification"),
+    path('add_notification_save/', HodViews.add_notification_save, name="add_notification_save"),
+    path('edit_notification/<notification_id>/', HodViews.edit_notification, name="edit_notification"),
+    path('edit_notification_save/', HodViews.edit_notification_save, name="edit_notification_save"),
+    path('delete_notification/<notification_id>/', HodViews.delete_notification, name="delete_notification"),
+
 ]

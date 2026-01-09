@@ -113,6 +113,20 @@
     </li>
 
     <li class="nav-item">
+        <a href="{% url 'manage_announcements' %}" class="nav-link {% if request.path == '/manage_announcements/' %} active {% endif %}">
+            <i class="nav-icon fas fa-bullhorn"></i>
+            <p>Manage Announcements</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="{% url 'manage_notifications' %}" class="nav-link {% if request.path == '/manage_notifications/' %} active {% endif %}">
+            <i class="nav-icon fas fa-bell"></i>
+            <p>Manage Notifications</p>
+        </a>
+    </li>
+
+    <li class="nav-item">
         <a href="{% url 'admin_profile' %}" class="nav-link {% if request.path == '/admin_profile/' %} active {% endif %}">
             <i class="nav-icon fas fa-user"></i>
             <p>Admin Profile</p>

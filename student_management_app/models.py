@@ -149,22 +149,7 @@ class FeedBackStaffs(models.Model):
 
 
 
-class NotificationStudent(models.Model):
-    id = models.AutoField(primary_key=True)
-    student_id = models.ForeignKey(Students, on_delete=models.CASCADE)
-    message = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    objects = models.Manager()
 
-
-class NotificationStaffs(models.Model):
-    id = models.AutoField(primary_key=True)
-    stafff_id = models.ForeignKey(Staffs, on_delete=models.CASCADE)
-    message = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    objects = models.Manager()
 
 
 class StudentResult(models.Model):
@@ -208,6 +193,17 @@ class Timetable(models.Model):
 
 class Announcement(models.Model):
     """Model for system-wide announcements"""
+    URGENCY_CHOICES = [
+        ('low', 'Low'),
+        ('medium', 'Medium'),
+        ('high', 'High'),
+    ]
+    CATEGORY_CHOICES = [
+        ('academic', 'Academic'),
+        ('administrative', 'Administrative'),
+        ('events', 'Events'),
+        ('general', 'General'),
+    ]
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
     message = models.TextField()
@@ -217,6 +213,10 @@ class Announcement(models.Model):
         ('staff', 'Staff'),
         ('admin', 'Admin'),
     ])
+    urgency = models.CharField(max_length=10, choices=URGENCY_CHOICES, default='medium')
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='general')
+    scheduled_date = models.DateTimeField(null=True, blank=True)
+    expiry_date = models.DateTimeField(null=True, blank=True)
     created_by = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -232,6 +232,17 @@ class Announcement(models.Model):
 
 class Notification(models.Model):
     """Unified notification model for all users"""
+    URGENCY_CHOICES = [
+        ('low', 'Low'),
+        ('medium', 'Medium'),
+        ('high', 'High'),
+    ]
+    CATEGORY_CHOICES = [
+        ('academic', 'Academic'),
+        ('administrative', 'Administrative'),
+        ('events', 'Events'),
+        ('general', 'General'),
+    ]
     id = models.AutoField(primary_key=True)
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
@@ -244,6 +255,10 @@ class Notification(models.Model):
         ('feedback', 'Feedback Reply'),
         ('general', 'General'),
     ])
+    urgency = models.CharField(max_length=10, choices=URGENCY_CHOICES, default='medium')
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='general')
+    scheduled_date = models.DateTimeField(null=True, blank=True)
+    expiry_date = models.DateTimeField(null=True, blank=True)
     is_read = models.BooleanField(default=False)
     link = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
